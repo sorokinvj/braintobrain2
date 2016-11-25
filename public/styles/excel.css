@@ -1,0 +1,289 @@
+html { font-size: 62.5%; }
+
+
+body {
+  padding:0!important;
+  margin: 0!important;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: Helvetica, sans-serif;
+}
+
+html, body {
+    /*max-width: 100%;*/
+    overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+    width: 100%!important;
+}
+
+/*EXCEL LIKE GRID */
+
+
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
+    padding-right: 0!important;
+    padding-left: 0!important;
+    border-right: solid 1px #dcdcdc;
+
+}
+
+
+.row {
+  border-bottom: solid 1px #dcdcdc;
+  width: 100%;
+  height:auto;
+  margin-left: 0!important;
+  margin-right: 0!important;
+
+}
+
+.row.abc > div {
+  border-right: 1px solid #969696;
+  border-bottom: 1px solid #969696;
+
+}
+
+.cell-A, .cell-num, .empty_cell, .cell {
+  box-sizing: border-box;
+}
+
+.cell-A, .cell-num  {
+  width: 100%;
+  text-align: center;
+  color: #626269;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.cell-A {
+    /*padding: 0.5rem;*/
+    background: -webkit-linear-gradient(#e7e7e7, #dfdfdf); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e7e7e7, #dfdfdf); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e7e7e7, #dfdfdf); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e7e7e7, #dfdfdf); /* Standard syntax */
+}
+.cell-num {
+    background: #DADADA;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696;
+
+}
+
+.empty_cell {
+  height: 31px;
+}
+
+.cell {
+    padding: 1rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: grey;
+    height:100%
+}
+/*.cell_heading {
+  padding: 1rem;
+}*/
+
+.celllogo {
+  padding: 1rem;
+}
+
+.cell:not(.nohover):hover, .empty_cell:hover, .excel_cell_empty {
+  border: solid 2px #1958CA;
+  padding:0.8rem;
+}
+.cell.client:not(.nohover):hover, .excel_client_like{
+  padding: 0.42rem!important;
+  border: solid 2px #1958CA;
+}
+
+
+
+
+
+.col-lg-1.c1 {
+  flex-basis: 2.5%!important;
+  max-width: 2.5%!important;
+  display: flex;
+}
+.col-lg-1.c4, .col-lg-1.c5, .col-lg-1.c6, .col-lg-1.c7 {
+  flex-basis: 15%!important;
+  max-width: 15%!important;
+}
+.col-lg-4.c456 {
+flex-basis: 45%;
+max-width: 45%;
+}
+
+.col-lg-1.c11 {
+  flex-basis: 4.1%!important;
+  max-width: 4.1%!important;
+}
+/*+++++++++++++++++++++++++*****************+++++++++++++++++++*/
+
+
+
+/*ACCORDION*/
+
+h3, h4 {
+    margin: 0;
+}
+
+ h3 a, h4 a {
+    display: block;
+}
+ h3 a::before, h4 a::before {
+    display: inline-block;
+    margin-right: 20px;
+    content: url('../images/arrows.svg');
+    color: #ff443a;
+}
+ h3 a.active::before, h4 a.active::before {
+  content: url('../images/arrows.svg');
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.flexbox-info-container {
+    display: none!important;
+}
+
+.flexbox-info-container.active {
+    display: flex!important;
+}
+
+/*+++++++++++++++++++++++++*****************+++++++++++++++++++*/
+
+
+/*ELEMENTS*/
+
+#tri {
+  height:15px;
+}
+
+#box-tri {
+    justify-content: flex-end;
+    border-bottom: 1px solid #969696
+  }
+
+#logo {
+  width: 100%;
+}
+
+.heading {
+  color: lightslategray;
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-left: -5rem;
+}
+
+.heading > a {
+  color:inherit;
+  text-decoration: none!important;
+}
+
+.heading > a:hover, .heading > a:focus {
+    color: #ff443a;
+    text-decoration:none!important;
+}
+
+.cell > h4 {
+    color: #ff443a;
+    font-weight: 500;
+}
+
+.cell.client {
+  height:31px;
+  padding: 0.6rem;
+}
+
+.container_excel {
+  margin: 0 auto;
+  width: 1440px;;
+}
+.c3 {
+  display:flex;
+}
+
+.nomob {
+  display:flex;
+}
+
+@media (max-width:1020px) {
+  .c3 {
+    display: none;
+  }
+
+  .heading {
+        margin-left: 0;
+  }
+}
+
+@media (max-width:801px) {
+
+  html, body {
+    /* max-width: 100%; */
+    overflow-y: visible;
+}
+
+  .c8, .c9, .c10, .c11 {
+    display:none;
+  }
+
+  .col-lg-1.c1 {
+    flex-basis: 2%!important;
+    max-width: 2%!important;
+}
+
+.col-lg-4.c456 {
+    flex-basis: 38.7%;
+    max-width: 38.7%;
+}
+
+.col-lg-1.c4, .col-lg-1.c5, .col-lg-1.c6, .col-lg-1.c7 {
+    flex-basis: 12.9%!important;
+    max-width: 12.9%!important;
+}
+
+.heading {
+    font-size: 2.7rem;
+}
+}
+
+@media (max-width:480px) {
+
+.container_excel {
+  width:100%;
+  }
+
+.nomob {
+  display: none;
+}
+.flexbox-info-container.active {
+    display: flex!important;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.row{
+  flex-direction: column!important;
+}
+
+.col-lg-1.c4, .col-lg-1.c5, .col-lg-1.c6, .col-lg-1.c7, .col-lg-4.c456, .col-lg-1.c11  {
+  flex-basis: 100%!important;
+  max-width: 100%!important;
+}
+
+
+}

@@ -1,0 +1,295 @@
+@media (min-width: 681px) and (max-width: 768px) {
+  .heading {
+  margin-left: 0!important;
+}
+}
+
+@media (max-width: 680px) {
+
+  #main {
+    padding-top: 20px!important;
+  }
+  article h3 a:not(.article-headline-link)::before {
+      content: url('../images/arrows_m.svg')!important;
+  }
+  article h3 a:not(.article-headline-link).active::before {
+    content: url('../images/arrows_m.svg')!important;
+      transform: rotate(90deg);
+      transform-origin: center;
+  }
+  .table {
+      display: inline;
+  }
+  .Rtable  {
+    flex-direction: column;
+    border:0!important;
+  }
+  .Rtable-cell {
+    width:100%;
+    border-left: solid 1px lightgray;
+    font-size: 16px!important;
+  }
+  .Rtable-cell > h4 {
+    font-size: 16px!important;
+    color: #ff443a;
+    line-height: 1.3;
+  }
+  .Rtable-last {
+    border-bottom: solid 1px lightgray!important;
+  }
+  .Rtable-cell--head {
+    display: none;
+  }
+  .Rtable-cell--head-mob {
+    margin-top: 10px;
+    border-top: solid 1px lightgray!important;
+  }
+  .Rtable--collapse, #logo_gallery {
+    display: block;
+  }
+  .Rtable--collapse  > .Rtable-cell { width: 100% !important; }
+  .Rtable--collapse  > .Rtable-cell--foot { margin-bottom: 1em; }
+
+  #logo_gallery > .logo_wrap {
+    width: auto;
+    padding: 0!important;
+  }
+  #logo {
+    width: 80%!important;
+  }
+  #braintobrain_text {
+    font-size: 18px!important;
+    letter-spacing: 1px!important;
+    margin-top: 6px!important;
+    font-weight: 300;
+  }
+  .heading {
+  margin-left: 0!important;
+  margin-bottom: 40px!important;
+  font-size: 27px!important;
+  }
+}
+
+/*DESKTOP */
+
+.h3, h3 {
+    font-size: 20px;
+}
+
+article h3, article h4 {
+    margin: 0;
+}
+
+article h3 a:not(.article-headline-link), article h4 a:not(.article-headline-link) {
+    display: block;
+}
+
+article h3 a:not(.article-headline-link)::before, article h4 a:not(.article-headline-link)::before {
+    display: inline-block;
+    margin-right: 20px;
+    content: url('../images/arrows.svg');
+    color: #ff443a;
+}
+
+article h3 a:not(.article-headline-link).active::before, article h4 a:not(.article-headline-link).active::before {
+  content: url('../images/arrows.svg');
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.flexbox-info-container {
+    display: none;
+}
+
+.flexbox-info-container.active {
+    display: block;
+}
+
+
+
+/* Tables
+================================== */
+.Rtable {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+  border: solid 1px #969696;
+}
+
+.Rtable-cell {
+  box-sizing: border-box;
+  flex: 0 1 24%;
+  width: 100%;  // Default to full width
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+  padding: 1rem;
+  border-bottom: solid 1px lightgray;
+  border-right: solid 1px lightgray;
+}
+.Rtable-cell-A, .Rtable-cell-num  {
+  width: 100%;
+  text-align: center;
+  color: #626269;
+  box-sizing: border-box;
+  border-right: solid 1px #969696;
+  border-bottom: solid 1px #969696;
+  overflow: hidden;
+}
+.Rtable-cell-A {
+    padding: 0.5rem;
+    background: -webkit-linear-gradient(#e7e7e7, #dfdfdf); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e7e7e7, #dfdfdf); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e7e7e7, #dfdfdf); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e7e7e7, #dfdfdf); /* Standard syntax */
+}
+.Rtable-cell-num {
+    flex: 0 1 4%;
+    padding: 1rem 0 0 0;
+    background: #DADADA;
+}
+
+/*.Rtable-cell:hover{
+  border: solid 2px #1958CA;
+  padding:0.8rem;
+}*/
+
+.sel-A, .sel-m, .sel-last {
+  background-color: #E5F2FE!important;
+  border: solid 2px #1958CA!important;
+
+}
+.sel-A {
+  background: -webkit-linear-gradient(#c4c4c4, #a1a1a1)!important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#c4c4c4, #a1a1a1)!important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#c4c4c4, #a1a1a1)!important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#c4c4c4, #a1a1a1)!important; /* Standard syntax */
+  color:white!important;
+  border-bottom: solid 1px lightgray!important;
+}
+
+.sel-m {
+  border-bottom: solid 1px lightgray!important;
+  border-top: solid 1px lightgray!important;
+}
+.sel-last {
+  border-top: solid 1px lightgray!important;
+}
+.no-border-bottom {
+  border-bottom: 0!important;
+}
+
+.no-border-right {
+  border-right: 0!important;
+}
+
+.Rtable-cell > h4 {
+  font-size: 14px;
+  color: #ff443a;
+  line-height: 1.3;
+}
+
+
+
+/*.Rtable-cell--head {
+  color: black;
+  font-weight: 600;
+}*/
+
+
+#main {
+    padding-top: 50px;
+  }
+
+#braintobrain_wrap {
+  margin-bottom: 50px;
+}
+
+#logo {
+  width: 351px;
+}
+
+#braintobrain_text {
+  font-family: "GothamPro-Light","Open Sans",sans-serif;
+  font-size: 21px;
+  letter-spacing: 1.8px;
+  display: block;
+  margin-top: 11px;
+}
+
+.heading {
+  margin-left: -50px;
+  margin-bottom: 30px;
+  color: lightslategray;
+  font-size: 37px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.heading > a {
+  color:inherit;
+  text-decoration: none!important;
+}
+
+.heading > a:hover {
+    color: #ff443a;
+    text-decoration:none!important;
+}
+
+.table {
+	display: table;
+	margin: 0 auto;
+}
+
+
+.logo_wrap {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: auto;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  padding: 1em;
+}
+
+#logo_gallery {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 50px 0 0 0;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+img.logo_gallery {
+	width:110px;
+	display: inline-block;
+}
+
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+img.grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+.Rtable-cell--head-mob {
+  flex-shrink: 2;
+}
