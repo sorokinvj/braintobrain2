@@ -32,7 +32,7 @@ keystone.init({
 	'wysiwyg menubar': true,
 });
 
-// keystone.set('cloudinary config', 'CLOUDINARY_URL=cloudinary://745226289771832:4aMAbiqaAVB5zd1roKaZT_lN9G0@braintobrain-ru' );
+keystone.set('cloudinary config', 'cloudinary://745226289771832:4aMAbiqaAVB5zd1roKaZT_lN9G0@braintobrain-ru' );
 
 // Load your project's Models
 keystone.import('models');
