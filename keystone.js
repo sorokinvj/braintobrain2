@@ -30,6 +30,7 @@ keystone.init({
 	'wysiwyg cloudinary images': true,
 	'wysiwyg override toolbar': false,
 	'wysiwyg menubar': true,
+	'cookie secret':"Well, it is an awesome day for me to finally deploy my Keystone app",
 });
 
 keystone.set('cloudinary config', 'cloudinary://745226289771832:4aMAbiqaAVB5zd1roKaZT_lN9G0@braintobrain-ru' );
