@@ -39,6 +39,8 @@
   flex-direction: column-reverse;
 }
 
+@media only screen and (max-width: 480px)  {
+
 .col-xs,
 .col-xs-1,
 .col-xs-2,
@@ -246,6 +248,8 @@
   -ms-flex-order: 1;
   -webkit-box-ordinal-group: 2;
   order: 1;
+}
+
 }
 
 @media only screen and (min-width: 760px) {
