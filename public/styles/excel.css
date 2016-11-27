@@ -414,6 +414,7 @@ img.grayscale {
 .cell.user::before, .cell.problem::before, .cell.product::before, .cell.result::before {
   display: block;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .container > .row {
   margin: 1rem;
