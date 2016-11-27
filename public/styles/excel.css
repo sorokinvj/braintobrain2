@@ -324,9 +324,14 @@ h3, h4 {
 h3 a::before, h4 a::before {
     display: inline-block;
     margin-right: 10px;
-    content: url(../images/arrows_m.svg);
-    color: #ff443a;
+    content: url('../images/arrows_m.svg');
 }
+h3 a.active::before, h4 a.active::before {
+ content: url('../images/arrows_m.svg');
+   transform: rotate(90deg);
+   transform-origin: center;
+}
+
 .braintobrain_logo {
     padding-top: 4rem;
     padding-bottom: 4rem;
