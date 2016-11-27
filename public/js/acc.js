@@ -16,7 +16,7 @@ $(function() {
 
 $(function() {
   if(!(jQuery.browser.mobile)) {
-      console.log("NON MOBILE!!!")
+      console.log("NON MOBILE")
       $(".empty_cell, .cell:not(.cell.client)").on("click", function(e){
         $(this).toggleClass('excel_cell_empty');
       });
