@@ -12,10 +12,10 @@
   "devDependencies": {
     "eslint": "^3.11.0",
     "eslint-config-keystone": "^3.0.0",
-    "eslint-plugin-react": "^6.7.1"
+    "eslint-plugin-react": "^6.7.1",
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js"
+    "start": "node keystone.js",
   }
 }
