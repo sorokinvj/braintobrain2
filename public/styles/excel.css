@@ -289,7 +289,7 @@ h3, h4 {
     max-width: 38.8%;
 }
 }
-@media (max-width:480px) {
+@media (max-width:480px)  {
 
   body {
     background-color: lightgray;
@@ -430,4 +430,11 @@ img.grayscale {
     font-weight: 100;
     line-height: 2.2rem;
 }
+
+.cell:hover, .empty_cell:hover, .excel_cell_empty {
+  border:0!important;
+  padding: 1rem!important;
+}
+
+
 }
