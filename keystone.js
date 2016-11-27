@@ -12,26 +12,30 @@ var keystone = require('keystone');
 keystone.init({
 	'name': 'braintobrain',
 	'brand': 'braintobrain',
-
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-
 	'emails': 'templates/emails',
 
 	'auto update': true,
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	// tinyMCE
-	'wysiwyg images': true,
+	'wysiwyg additional plugins': 'image, media',
+	'wysiwyg images':true,
 	'wysiwyg cloudinary images': true,
+	'wysiwyg additional options': { 'external_plugins': { 'uploadimage': '/js/uploadimage/plugin.min.js' } },
 	'wysiwyg override toolbar': false,
 	'wysiwyg menubar': true,
 	'cookie secret':"Well, it is an awesome day for me to finally deploy my Keystone app",
 	'session store':'mongo',
+});
+keystone.set('wysiwyg additional options', {
+	image_caption: true,
+	image_description: false,
+	image_title: true,
 });
 
 keystone.set('cloudinary config', 'cloudinary://745226289771832:4aMAbiqaAVB5zd1roKaZT_lN9G0@braintobrain-ru' );

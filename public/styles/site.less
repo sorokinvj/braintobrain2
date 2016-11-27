@@ -15,6 +15,7 @@
 //
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&subset=cyrillic');
 
 @import "site/variables.less";
 
@@ -25,64 +26,158 @@
 // Add your own site style includes here
 @import "site/layout.less";
 
+html { font-size: 62.5%; }
+
+
 body {
-    padding-top: 50px;
+  padding:0;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.blog {
-  color:#a5a5a5;
-  margin-top: 30px;
+html, body {
+    /*max-width: 100%;*/
+    overflow-x: hidden;
+}
+
+p {
+    margin: 3rem 0;
 }
 
 a {
+  text-decoration: none;
   color:inherit;
 }
 
-h1.head {
-  font-family: 'Anonymous Pro';
-	font-size: 26px;
-	font-weight: 400;
-  color: @red;
-  text-transform: uppercase;
-  margin-top: 0;
+ol {
+    padding-left: 20px;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-style: italic;
+    /* border-left: 5px solid #eee; */
+    font-weight: 300;
+    text-align: center;
+    font-family: "Open Sans";
+    border: 0;
 }
 
 #logo {
-  width:187px;
-  display: block;
-}
-h6.logotext {
-  display: block;
-  font-family: 'GothamPro-Light';
-  font-size: 13px;
-  margin-top: 8px;
+width: 70%;
 }
 
-
-h2.headers {
-	font-family: "GothamPro-Light";
-	font-size: 16px;
-  margin: 20px 0;
-  display: inline-block;
+.navbar-brand {
+    width: 75%;
 }
 
-.selection {
-  color:@red;
-  font-family: GothamProNarrow-Medium;
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
 }
 
-.brand {
-  font-family: GothamProNarrow-Medium;
-  color:#5f5f5f
-    // text-transform: uppercase;
-}
-
-.arrows {
-  background: url(../images/arrow.png);
-  background-repeat: repeat-x;
-  height: 17px;
-  display: inline-block;
+.image-wrap{
+  height: 86vh;
+  z-index: -1;
   position: relative;
-  margin: 0px 0 0 10px;
-  top: 4px;
+}
+.hero {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.36) 65%, rgba(0,0,0,0.59) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0.36) 65%,rgba(0,0,0,0.59) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.36) 65%,rgba(0,0,0,0.59) 100%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#96000000',GradientType=0 ); /* IE6-9 */
+  height: 86vh;
+  }
+
+article * img {
+  width:100%;
+}
+
+.mob {
+  display:block;
+}
+.nomob {
+  display:none;
+}
+
+.title {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  margin-top: -25rem;
+  padding-left: 15px;
+  font-size: 3rem;
+}
+
+.lead{
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #d4d4d4;
+  padding-left: 15px;
+  margin-top: 2rem;
+}
+
+article {
+  margin-top: 5rem;
+}
+
+.post {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: gray;
+  clear: both;
+  margin-top: 40px;
+}
+
+.client_post {
+  margin-top: 50px;
+  color:#969696;
+  margin-top: 70px;
+}
+.clients {
+  color:@red;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.tags {
+  background: lightcoral;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 8px;
+  display: inline;
+  margin-right: 10px;
+  float: left;
+  font-size: 1.6rem;
+  margin-top: 20px;
+
+}
+
+figcaption {
+    margin: 10px 0 0 0;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+figure.image {
+    margin: 40px 0;
+}
+
+
+
+
+
+@media (min-width:480px) {
+.mob {
+  display:none;
+}
+
 }

@@ -17,12 +17,18 @@ Post.add({
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.CloudinaryImage },
-	content: {
-		frontpage: { type: Types.Html, wysiwyg: true, required: true, initial: false },
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 },
+	cases: {
+		client: {type: String, initial:true, label:"Клиент:"},
+		problem: {type: String, initial:true, label:"Проблема:"},
+		product: {type: String, initial:true, label:"Что сделали:"},
+		result: {type: String, initial:true, label:"Результат:"},
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
+	content: {
+		frontpage: { type: Types.Html, wysiwyg: true, required: true, initial: false, label:"Заголовок для блога"},
+		brief: { type: Types.Html, wysiwyg: true, height: 150, label:"Лид" },
+		extended: { type: Types.Html, wysiwyg: true, height: 400, label:"Основной текст" },
+	},
 });
 
 Post.schema.virtual('content.full').get(function () {
