@@ -12,7 +12,7 @@ block content
 			.nomob.image-wrap(style="background:url(" + imgdesktop + ")")
 				//- img(src=data.post._.image.fit(750,450)).post-header
 			h1.title= data.post.title
-			.lead:!=data.post.content.brief
+			.lead: !=data.post.content.brief
 		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 			if data.post.categories && data.post.categories.length
 				each cat, cat_i in data.post.categories
