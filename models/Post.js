@@ -1,4 +1,7 @@
 var keystone = require('keystone');
+
+//req can be node request or connect/express request
+
 var Types = keystone.Field.Types;
 
 /**
@@ -28,12 +31,14 @@ Post.add({
 		frontpage: { type: Types.Html, wysiwyg: true, required: true, initial: false, label:"Заголовок для блога"},
 		brief: { type: Types.Html, wysiwyg: true, height: 150, label:"Лид" },
 		extended: { type: Types.Html, wysiwyg: true, height: 400, label:"Основной текст" },
+		cta: { type: Types.Html, wysiwyg: true, initial:false, label:"Call to action" },
 	},
 });
 
 Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
+
 
 Post.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
 Post.register();

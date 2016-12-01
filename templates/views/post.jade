@@ -1,18 +1,44 @@
 extends ../layouts/default
 
+block header	
+	#header
+
+		//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+		//- ... or completely change this header to suit your design.
+
+		div(role="navigation").navbar.navbar-default
+			.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+				.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='/') 
+						img#logo(src="/images/braintobrain_logo_on_w.svg")
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						each link in navLinks
+							li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+
 block content
 	if !data.post
 		h2 Ошибка! Простите, но такого поста не существует.
 	else
 		if data.post.image.exists
 		.hero
-			- var imgmob = data.post._.image.fill(414,736,f_auto,center);		
-			- var imgdesktop = data.post._.image.fill(1440,f_auto);	
-			.mob.image-wrap(style="background-image:url(" + imgmob + ")")
-			.nomob.image-wrap(style="background:url(" + imgdesktop + ")")
-				//- img(src=data.post._.image.fit(750,450)).post-header
-			h1.title= data.post.title
-			.lead: !=data.post.content.brief
+			if browser.touch
+				- var img = data.post._.image.fill(414,736,f_auto,center);		
+			if browser.desktop
+				- var img = data.post._.image.fill(1440,900,f_auto,center);		
+			if browser.tablet
+				- var img = data.post._.image.fill(768,1028,f_auto,center);	
+			.image-wrap(style="background:url(" + img + ")")
+			.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+				h1.title 
+					=data.post.title
+				.lead
+					!=data.post.content.brief
 		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 			if data.post.categories && data.post.categories.length
 				each cat, cat_i in data.post.categories
@@ -34,7 +60,34 @@ block content
 								//- 	| by #{data.post.author.name.first}
 							.post
 								!= data.post.content.full
-							if data.post.categories && data.post.categories.length
-								each cat, cat_i in data.post.categories
-									a.tags(href='/blog/' + cat.key)= cat.name
+							.tags_wrap
+								if data.post.categories && data.post.categories.length
+									each cat, cat_i in data.post.categories
+										a.tags(href='/blog/' + cat.key)= cat.name		
+								.clearfix						
+							.calltoaction
+								!=data.post.content.cta
+
 								
+block footer
+	footer
+		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+			.mailto
+				a(href="mailto:hello@braintobrain.ru")
+					| hello@braintobrain.ru
+			a#facebook(href="https://www.facebook.com/braintobrain.ru/")
+				img(src='/images/fb.svg' width=60)
+			
+			ul.nav.navbar-nav
+				each link in navLinks
+					li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+				a.navbar-brand(href='/') 
+					img#logo(src="/images/braintobrain_agency_logo_on_w.svg")
+
+
+
+
+block js
+
+
+		

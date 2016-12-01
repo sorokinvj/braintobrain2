@@ -8,8 +8,6 @@
  * modules in your project's /lib directory.
  */
 var _ = require('lodash');
-
-
 /**
 	Initialises the standard view locals
 
@@ -24,8 +22,20 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Контакты', key: 'contact', href: '/contact' },
 	];
 	res.locals.user = req.user;
+
+	var bowser = require('node-bowser');
+	var bt = new bowser(req);
+
+		res.locals.browser = {
+			mobile: bt.isMobile(),
+			tablet: bt.isTablet(),
+			touch: bt.isTouch(),
+			desktop: bt.isDesktop(),
+		}
+
 	next();
 };
+
 
 
 /**
