@@ -16,7 +16,7 @@
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&subset=cyrillic');
-
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=cyrillic');
 @import "site/variables.less";
 
 
@@ -42,7 +42,13 @@ html, body {
     overflow-x: hidden;
 }
 
+h1 {
+  margin:0;
+}
+
 h3, .h3 {
+  font-family: 'Open Sans', sans-serif;
+
     font-size: 2.4rem;
     line-height: 3rem;
 }
@@ -51,7 +57,7 @@ p {
     margin: 3rem 0;
 }
 
-a {
+a, a:hover {
   text-decoration: none;
   color:inherit;
 }
@@ -117,7 +123,6 @@ article * img {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   margin-top: -25rem;
-  padding-left: 15px;
   font-size: 3rem;
 }
 
@@ -126,7 +131,6 @@ article * img {
   font-weight: 300;
   font-size: 2rem;
   color: #d4d4d4;
-  padding-left: 15px;
   margin-top: 2rem;
 }
 
@@ -161,7 +165,7 @@ article {
 .tags {
   background: lightcoral;
   color: white;
-  padding: 0 0.5rem;
+  padding: 0.2rem 0.8rem;
   border-radius: 8px;
   display: inline;
   margin-right: 10px;
@@ -225,6 +229,10 @@ footer * .nav>li {
   margin-top:0;
 }
 
+.tags:hover {
+  color:white;
+}
+
 @media (min-width:768px) {
 .mob {
   display:none;
@@ -254,6 +262,8 @@ footer * .nav>li {
 }
 
 h3, .h3 {
+  font-family: 'Open Sans', sans-serif;
+
     font-size: 3rem;
     line-height: 3rem;
     margin-top: 4rem;
@@ -286,10 +296,12 @@ footer {
     font-size: 4rem;
     line-height: 5rem;
     margin-top: -30rem;
+    font-weight: 600;
 }
 
 .lead {
     font-size: 2.1rem;
+    font-style: normal;
 }
 
 article {
@@ -298,6 +310,108 @@ article {
 
 .tags {
     margin-top: 4rem;
+}
+
+ol > li {
+  margin:10px 0;
+}
+.container.sec {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+}
+
+@media (min-width: 992px) {
+
+#header {
+    margin-top: 10px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 5rem;
+    line-height: 6rem;
+}
+
+.hero, .image-wrap {
+    height: 91vh;
+}
+
+.post {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: rgba(0,0,0,0.7);
+    font-family: 'Charter', serif;
+}
+.clients {
+    font-family: 'CharterBlackItalic', serif;
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.calltoaction, .mailto, #facebook {
+    clear: both;
+    font-size: 3rem;
+    font-family: 'CharterBoldItalic', serif;
+    font-style: italic;
+}
+
+footer * .navbar-nav {
+  margin:0;
+}
+
+footer * .navbar-nav>li {
+    float:right;
+    text-align: right;
+}
+
+footer * .navbar-nav>li>a {
+    padding-top: 0;
+}
+
+.mailto * img {
+  margin-top: 20px;
+  width: 50px;
+  display: block;
+}
+
+.hidden-md {
+  display: none;
+}
+footer {
+    background-size: cover;
+    background-position-y: 64%;
+    height: 40rem;
+}
+
+
+blockquote {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 5rem;
+  line-height: 6rem;
+  }
+
+h3, .h3 {
+      font-size: 3.5rem;
+      line-height: 4rem;
+      font-weight: 700;
+      margin-top: 4rem;
+      font-family: 'Open Sans', sans-serif;
+
+  }
+
+.container.sec {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+h4, .h4 {
+    font-size: inherit;
 }
 
 }

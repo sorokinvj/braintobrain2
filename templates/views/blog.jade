@@ -50,9 +50,9 @@ mixin post(post, id)
 		//- if post.content.extended
 		//- 	p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
-//- block intro
-//- 	.container
-//- 		h1= data.category ? data.category.name : 'Blog'
+block intro
+	.container
+		h1= data.category ? data.category.name : 'Blog'
 
 block content
 	.container

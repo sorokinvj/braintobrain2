@@ -20,13 +20,16 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Главная', key: 'home', href: '/' },
 		{ label: 'Блог', key: 'blog', href: '/blog' },
 		{ label: 'Контакты', key: 'contact', href: '/contact' },
+		{ label: 'Кейсы', key: 'cases', href: '/cases' },
+
+
 	];
 	res.locals.user = req.user;
 
 	var bowser = require('node-bowser');
 	var bt = new bowser(req);
 
-		res.locals.browser = {
+	res.locals.browser = {
 			mobile: bt.isMobile(),
 			tablet: bt.isTablet(),
 			touch: bt.isTouch(),

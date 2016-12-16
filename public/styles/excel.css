@@ -129,7 +129,7 @@ max-width: 45%;
   padding:0.8rem;
 }
 .cell.client:not(.nohover):hover, .excel_client_like{
-  padding: 0.42rem;
+  padding: 0.42rem!important;
   border: solid 2px #1958CA;
 }
 
@@ -203,7 +203,7 @@ h3, h4 {
     text-decoration:none;
 }
 
-.cell > h4 {
+.cell > h4, .cell > a > h4  {
     color: #ff443a;
     font-weight: 500;
 }
@@ -229,7 +229,7 @@ h3, h4 {
   display: none;
 }
 
-.contacts * .client:first-child {
+.contacts * .client:first-child, .cli * .client:first-child {
   color: black;
 }
 

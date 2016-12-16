@@ -1,0 +1,176 @@
+extends ../layouts/default
+
+block css 
+  link(href="/styles/flexboxgrid.css", rel="stylesheet")
+  link(href="/styles/excel.css", rel="stylesheet")
+
+mixin emptyrow(number)
+  .row.empty
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
+    
+mixin clients(number, client1, client2, client3, client4)
+  .row.empty
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.client: !=client1
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell.client: !=client2
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell.client: !=client3
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .cell.client: !=client4
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .cell
+        
+mixin table-head(number)
+    unless browser.touch
+      .row
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell: b: Клиент
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell: b: Бизнес-проблема
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell: b: Что сделали
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .cell: b: Результат
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .cell
+  
+mixin table-case(number, post)
+      .row
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.user 
+          a(href='/blog/post/' + post.slug)
+            h4: =post.cases.client
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell: =post.cases.problem
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell: =post.cases.product
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .cell: =post.cases.result
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .cell
+        
+mixin question(number, category, url_to)
+  -var count=number;
+  .row.question
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1: .cell-num: =number
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3: .cell
+    .col-lg-4.col-md-4.col-sm-4.col-xs-12.c456: .cell_heading.nohover
+      h3.heading: a(href="#"+url_to)=category.heading
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c7: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c8: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c9: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c10: .cell
+  section.flexbox-info-container(id=url_to): .container.sec
+    -var c=number+1;
+    +table-head(c)
+    each post in data.posts 
+      each cat in post.categories
+        if cat.name==category.name  
+          +table-case(c+1, post)
+          -c++;
+  unless browser.touch
+    +emptyrow(number+1)
+
+        //- -var count += (val+2);
+      
+    
+block content
+
+  .container_excel
+    unless browser.touch
+      .row.abc
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: #box-tri.box.cell-A
+          img#tri(src="/images/cell_triangle.svg")
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .box.cell-A: |A
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .box.cell-A: |B
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .box.cell-A: |C
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .box.cell-A: |D
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .box.cell-A: |E
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .box.cell-A: |F
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .box.cell-A: |G
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .box.cell-A: |H
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .box.cell-A: |I
+      +emptyrow(1)
+    .row.braintobrain_logo
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1: .cell-num: |2
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .celllogo
+        img#logo(src="/images/braintobrain_agency_logo_on_w.svg")
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c5: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c6: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c7: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c8: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c9: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c10: .cell
+    unless browser.touch
+      +emptyrow(3)
+      -var count = 4;
+    each category, val in data.categories  
+      +question(count,category,"url" + val)
+      -count=count+2;
+    unless browser.touch
+      +emptyrow(count)
+      .row.cli
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =count+1
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.client: b: Наши клиенты
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
+      +clients(count+2, "Кофемания", "Yandex Data Factory", "МГУ", "Финансовый университет")
+      +clients(count+3, "Никола-Ленивец", "City Golf", "Варенйъе", "Teamwork=")
+      +clients(count+4, "Форсайт-флот", "Батяня", "Кухня Family", "Хрупкие люди")
+      +emptyrow(count+5)
+      .row.contacts
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =count+6
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.client: b: Контакты
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
+      +clients(count+7, "+79250740171")
+      +clients(count+8, "<a href='mailto:hello@braintobrain.ru'>hello@braintobrain.ru</a>")
+      +clients(count+9, '<a href="https://www.facebook.com/braintobrain.ru/">facebook</a>')
+      -var c = count + 10;
+      -for (var i=count+10;i<30;i++)
+        +emptyrow(i)
+
+
+
+
+    
+
+
+    //-   
+    //- +question(4,'IDEA','#start')
+    //- unless browser.touch
+    //-   +emptyrow(5)
+    //-   
+    //- .container
+
+        
+        
+      
+    
+    //- !=data.categories
+    //- 
+    //- each cat in data.categories
+    //-   if cat.Main_question
+    //-     if cat.name == "IDEA"
+    //-       !=cat.heading
+
+    
+block js 
+  script(src="/js/acc.js")
