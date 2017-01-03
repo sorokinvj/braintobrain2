@@ -40,5 +40,5 @@ Post.schema.virtual('content.full').get(function () {
 });
 
 
-Post.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
+Post.defaultColumns = 'cases.client|20%, title|40%, categories|40%';
 Post.register();
