@@ -49,7 +49,7 @@ mixin table-case(number, post)
           a(href='/blog/post/' + post.slug)
             h4: =post.cases.client
         .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell: =post.cases.problem
-        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell: =post.cases.product
+        .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell.product: =post.cases.product
         .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .cell: =post.cases.result
         .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .cell
         .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .cell
