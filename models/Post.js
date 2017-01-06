@@ -1,6 +1,4 @@
 var keystone = require('keystone');
-// const Typograf = require('typograf');
-// const tp = new Typograf({lang: 'ru'});
 
 //req can be node request or connect/express request
 
@@ -37,18 +35,9 @@ Post.add({
 	},
 });
 
-// Post.schema.virtual('title_typo').get(function () {
-// 	return tp.execute(this.title);
-// });
-//
-// Post.schema.virtual('content.extended_typo').get(function () {
-// 	return tp.execute(this.content.extended);
-// });
-
 Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
-
 
 Post.defaultColumns = 'cases.client|20%, title|40%, categories|40%';
 Post.register();

@@ -1,6 +1,11 @@
 var keystone = require('keystone');
+
+// инициализация типографа
 const Typograf = require('typograf');
 const tp = new Typograf({lang: 'ru'});
+// tp.enable('ru/optalign/*');
+
+// override console.log, чтобы писать лог и в консоль, и в файл
 var fs = require('fs');
 var util = require('util');
 var log_file = fs.createWriteStream(__dirname + '/debugge.log', {flags : 'w'});
@@ -10,6 +15,7 @@ console.log = function(d) { //
   log_file.write(util.format(d) + '\n');
   log_stdout.write(util.format(d) + '\n');
 };
+
 
 exports = module.exports = function (req, res) {
 

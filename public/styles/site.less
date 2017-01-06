@@ -8,6 +8,8 @@
 // Bootstrap can be removed entirely by deleting this line.
 
 @import "bootstrap/bootstrap.less";
+@import "cases.less";
+
 
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
@@ -80,6 +82,22 @@ blockquote {
     text-align: center;
     font-family: "Open Sans";
     border: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 1rem 0 0 4rem;
+}
+
+ul>li:before {
+  display: inline-block;
+  margin-right: 1.4rem;
+  margin-left: -2.5rem;
+  content: "»";
+  font-size: 2.5rem;
+  line-height: .5;
+  color: #ff443a;
+  font-family: "Open Sans";
 }
 
 #logo {
