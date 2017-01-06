@@ -1,5 +1,15 @@
 var keystone = require('keystone');
+const Typograf = require('typograf');
+const tp = new Typograf({lang: 'ru'});
+var fs = require('fs');
+var util = require('util');
+var log_file = fs.createWriteStream(__dirname + '/debugge.log', {flags : 'w'});
+var log_stdout = process.stdout;
 
+console.log = function(d) { //
+  log_file.write(util.format(d) + '\n');
+  log_stdout.write(util.format(d) + '\n');
+};
 
 exports = module.exports = function (req, res) {
 
@@ -26,6 +36,19 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
+			// for (var dict in locals.data.post) {
+			// 	var value = locals.data.post[dict];
+			// 	console.log(value);
+			// }
+			locals.data.post.title = tp.execute(locals.data.post.title);
+			locals.data.post.cases.client = tp.execute(locals.data.post.cases.client);
+			locals.data.post.cases.product = tp.execute(locals.data.post.cases.product);
+			locals.data.post.cases.problem = tp.execute(locals.data.post.cases.problem);
+			locals.data.post.cases.result = tp.execute(locals.data.post.cases.result);
+			locals.data.post.content.frontpage = tp.execute(locals.data.post.content.frontpage);
+			locals.data.post.content.brief = tp.execute(locals.data.post.content.brief);
+			locals.data.post.content.extended = tp.execute(locals.data.post.content.extended);
+			locals.data.post.content.cta = tp.execute(locals.data.post.content.cta);
 			next(err);
 		});
 

@@ -18,22 +18,26 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 	'emails': 'templates/emails',
-
 	'auto update': true,
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'cookie secret':"Well, it is an awesome day for me to finally deploy my Keystone app",
+	'session store':'mongo',
+
+	//tinymce
 	'wysiwyg additional plugins': 'image, media',
 	'wysiwyg cloudinary images': true,
 	'wysiwyg override toolbar': false,
 	'wysiwyg menubar': true,
-	'cookie secret':"Well, it is an awesome day for me to finally deploy my Keystone app",
-	'session store':'mongo',
-});
-keystone.set('wysiwyg additional options', {
-	image_caption: true,
-	image_description: false,
-	image_title: true,
+	'wysiwyg additional options': {
+		image_caption: true,
+		image_description: false,
+		image_title: true,
+		external_plugins: {
+	            'typograf':'/js/tinymce/plugins/typograf/plugin.min.js'
+	        }
+	},
 });
 
 keystone.set('cloudinary config', 'cloudinary://745226289771832:4aMAbiqaAVB5zd1roKaZT_lN9G0@braintobrain-ru' );

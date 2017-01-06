@@ -67,10 +67,21 @@ block content
 									each cat, cat_i in data.post.categories
 										if cat.NoShow != true
 											a.tags(href='/blog/' + cat.key)= cat.name		
-								.clearfix						
+							.clearfix						
 							.calltoaction
 								!=data.post.content.cta
 
+// DEBUG _ TEMP
+
+//- block debug
+//- 	.container
+//- 		!=data.post.title
+//- 		hr
+//- 		!=data.post.cases.problem
+//- 		hr
+//- 		!=data.post
+								
+//
 								
 block footer
 	footer
@@ -90,9 +101,8 @@ block footer
 							img#logo(src="/images/braintobrain_agency_logo_on_w.svg")
 
 
-
-
 block js
+
 
 
 		

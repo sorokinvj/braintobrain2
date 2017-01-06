@@ -1,4 +1,6 @@
 var keystone = require('keystone');
+// const Typograf = require('typograf');
+// const tp = new Typograf({lang: 'ru'});
 
 //req can be node request or connect/express request
 
@@ -34,6 +36,14 @@ Post.add({
 		cta: { type: Types.Html, wysiwyg: true, initial:false, label:"Call to action" },
 	},
 });
+
+// Post.schema.virtual('title_typo').get(function () {
+// 	return tp.execute(this.title);
+// });
+//
+// Post.schema.virtual('content.extended_typo').get(function () {
+// 	return tp.execute(this.content.extended);
+// });
 
 Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
