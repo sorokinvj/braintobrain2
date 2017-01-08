@@ -26,15 +26,17 @@ exports.initLocals = function (req, res, next) {
 	];
 	res.locals.user = req.user;
 
-	var bowser = require('node-bowser');
-	var bt = new bowser(req);
-
-	res.locals.browser = {
-			mobile: bt.isMobile(),
-			tablet: bt.isTablet(),
-			touch: bt.isTouch(),
-			desktop: bt.isDesktop(),
-		}
+	// var bowser = require('node-bowser');
+	// var bt = new bowser(req);
+	//
+	// res.locals.browser = {
+	// 		mobile: bt.isMobile(),
+	// 		tablet: bt.isTablet(),
+	// 		touch: bt.isTouch(),
+	// 		desktop: bt.isDesktop(),
+	// 		name: bt.name,
+	// 		version: bt.version
+	// 	}
 
 	next();
 };

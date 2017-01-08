@@ -62,7 +62,7 @@ exports = module.exports = function (req, res) {
 		var q = keystone.list('Post').model.find()
 			.sort('categories')
 			.populate('categories')
-			.select('slug cases categories');
+			.select('slug cases categories content');
 
 		if (locals.data.category) {
 			q.where('categories').in([locals.data.category]);
