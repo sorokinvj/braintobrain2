@@ -34,6 +34,8 @@ keystone.init({
 		image_caption: true,
 		image_description: false,
 		image_title: true,
+		extended_valid_elements : "no-typo",
+    custom_elements: "emstart",
 		external_plugins: {
 	            'typograf':'/js/tinymce/plugins/typograf/plugin.min.js'
 	        }
