@@ -302,7 +302,7 @@ h3, .h3 {
 }
 
 #logo {
-    width: 180px;
+    width: 180px!important;
 }
 
 .image-wrap {
@@ -320,19 +320,36 @@ h3, .h3 {
   font-size: 1.6rem;
 }
 
-footer * .navbar-nav>li {
+footer * .navbar-nav > li {
     float:none;
     font-size: 2rem;
 }
 
+footer * .navbar-nav > li > a{
+padding-left: 0;
+}
+
+footer * .navbar-nav {
+  margin:0;
+}
+
+footer * img {
+    display: block;
+    margin-top: 3rem;
+}
+
 footer * a.navbar-brand {
     width: 100%;
-    padding: 4rem 15px;
+    padding: 0;
 }
 
 footer {
     background: url(/images/footer_pattern_big.webp);
     background-size: 101%;
+}
+
+footer .navbar-brand {
+    height: auto;
 }
 
 .mailto {
