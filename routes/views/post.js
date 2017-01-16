@@ -2,7 +2,7 @@ var keystone = require('keystone');
 
 // инициализация типографа
 const Typograf = require('typograf');
-const tp = new Typograf({lang: 'ru'});
+
 
 Typograf.rule({
     name: 'common/other/braintobrain',
@@ -10,7 +10,10 @@ Typograf.rule({
         return text.replace(/»to»/g, '»to»');
     }
 });
+const tp = new Typograf({lang: 'ru'});
 tp.enable('common/other/braintobrain');
+tp.addSafeTag('<no-typo>', '</no-typo>');
+
 // tp.enable('ru/optalign/*');
 
 // override console.log, чтобы писать лог и в консоль, и в файл
