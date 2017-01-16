@@ -33,9 +33,7 @@ exports.initLocals = function (req, res, next) {
 			mobile: bt.isMobile(),
 			tablet: bt.isTablet(),
 			touch: bt.isTouch(),
-			desktop: bt.isDesktop(),
-			name: bt.name,
-			version: bt.version
+			desktop: bt.isDesktop()
 		}
 
 	next();

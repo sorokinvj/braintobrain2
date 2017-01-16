@@ -3,6 +3,14 @@ var keystone = require('keystone');
 // инициализация типографа
 const Typograf = require('typograf');
 const tp = new Typograf({lang: 'ru'});
+
+Typograf.rule({
+    name: 'common/other/braintobrain',
+    handler: function (text) {
+        return text.replace(/»to»/g, '»to»');
+    }
+});
+tp.enable('common/other/braintobrain');
 // tp.enable('ru/optalign/*');
 
 // override console.log, чтобы писать лог и в консоль, и в файл
