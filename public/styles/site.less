@@ -17,16 +17,19 @@
 //
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600,700,800,900i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700,900&subset=cyrillic');
 @import "site/variables.less";
+@import "site/fonts.less";
+
 
 
 // Site Styles
 // ===========
 
 // Add your own site style includes here
-@import "site/layout.less";
+@import "site/main.less";
+
 
 html { font-size: 62.5%; }
 
@@ -309,14 +312,22 @@ h3, .h3 {
   background-size: cover!important;
 }
 
+.navbar-default .navbar-nav>li>a
+{
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: @red;
-  font-family: 'Open Sans', serif;
   font-size: 1.6rem;
   background-color: transparent;
 }
 .navbar-nav > li {
-  font-family: 'Open Sans', serif;
   font-size: 1.6rem;
 }
 

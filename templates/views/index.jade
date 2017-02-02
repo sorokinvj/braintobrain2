@@ -1,43 +1,46 @@
 extends ../layouts/default
 
 block header	
-	#header
 
-		//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-		//- ... or completely change this header to suit your design.
-
-		div(role="navigation").navbar.navbar-default
-			.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-						span.sr-only Toggle navigation
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a.navbar-brand(href='/') 
-						img#logo(src="/images/braintobrain_logo_on_w.svg")
-				.collapse.navbar-collapse
-					ul.nav.navbar-nav.navbar-right
-						each link in navLinks
-							li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		p
-			a(href='/cases/').btn.btn-lg.btn-primary Кейсы 
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>sorokinvj@gmail.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
+	section(id="main_hero")
+			div(role="navigation").navbar.navbar-default
+				.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1
+					.navbar-header
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href='/') 
+							img#logo(src="/images/braintobrain_logo_on_w.svg")
+					.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-right
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							if user && user.canAccessKeystone
+								li
+									a(href='/keystone').btn.btn-lg.btn-primary Admin
+							else
+								li 
+									a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+			.container: .row: .col-xs-12.col-lg-6.col-lg-offset-1.col-sm-6.col-sm-offset-1.col-md-7.col-md-offset-1
+				h1#mainwrap.rw-wrapper
+					span Привет, меня зовут Владислав Сорокин. 
+					br
+					br				
+					span Я веду
+					.rw-words.rw-words-1
+						span форсайт-сессии. 
+						span проекты по дизайн-мышлению. 
+						span воркшопы Lego Serious Play.
+					br
+					span Они помогут вам совершить открытия и&nbsp;добиться ясного мышления.
+					br
+					br
+					span brain<span style="color:#ff443a;">»</span>to<span style="color:#ff443a;">»</span>brain — интеллектуальный катализатор, ускоряет команды и бренды, помогает им рисковать, меняться и преодолевать кризис. 
+					br
+					br
+					span Помимо профессиональной, я веду научную деятельность по изучению креативности и коллективного интеллекта.
+block js
