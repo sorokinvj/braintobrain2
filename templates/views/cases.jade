@@ -45,7 +45,10 @@ mixin table-case(number, post)
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.user 
-      a(href='/blog/post/' + post.slug)
+      if (post.content.extended)
+        a(href='/blog/post/' + post.slug)
+          h4: =post.cases.client
+      else
         h4: =post.cases.client
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell.problem: =post.cases.problem
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell.product: =post.cases.product
@@ -125,7 +128,7 @@ block content
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
-    +clients(count+2, "Кофемания", "Yandex Data Factory", "МГУ", "Финансовый университет")
+    +clients(count+2, "Кофемания", "Yandex Data Factory", "Вольное дело", "Финансовый университет")
     +clients(count+3, "Никола-Ленивец", "City Golf", "Варенйъе", "Teamwork=")
     +clients(count+4, "Форсайт-флот", "Батяня", "Кухня Family", "Хрупкие люди")
     +emptyrow(count+5)
