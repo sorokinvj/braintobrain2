@@ -19,12 +19,6 @@ block content
 						ul.nav.navbar-nav.navbar-right
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-							if user && user.canAccessKeystone
-								li
-									a(href='/keystone').btn.btn-lg.btn-primary Admin
-							else
-								li 
-									a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
 			.container: .row: .col-xs-12.col-lg-6.col-lg-offset-1.col-sm-6.col-sm-offset-1.col-md-7.col-md-offset-1
 				h1#mainwrap.rw-wrapper
 					span Привет, меня зовут Владислав Сорокин. 
@@ -36,10 +30,10 @@ block content
 						span проекты по дизайн-мышлению. 
 						span воркшопы Lego Serious Play.
 					br
-					span Они помогут вам совершить открытия и&nbsp;добиться ясного мышления.
+					span Они помогут вам совершать открытия и&nbsp;добиться ясного мышления.
 					br
 					br
-					span brain<span style="color:#ff443a;">»</span>to<span style="color:#ff443a;">»</span>brain — интеллектуальный катализатор, ускоряет команды и бренды, помогает им рисковать, меняться и преодолевать кризис. 
+					span brain<span style="color:#ff443a;">»</span>to<span style="color:#ff443a;">»</span>brain — интеллектуальный катализатор, он ускоряет команды и бренды, помогает им рисковать, меняться и преодолевать кризис. 
 					br
 					br
 					span Помимо профессиональной, я веду научную деятельность по изучению креативности и коллективного интеллекта.
