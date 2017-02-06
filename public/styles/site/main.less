@@ -13,6 +13,10 @@
   padding-top: 30px;
 }
 
+#site {
+	display: block;
+}
+
 #mainwrap {
     font-size: 2rem;
     position: relative;
@@ -22,12 +26,14 @@
     margin: 0;
         font-weight: 400;
 }
-
+.words {
+margin-top: 3rem;
+}
 
 .rw-words{
 	display: inline;
   font-weight: inherit;
-	// text-indent: 1rem;
+	text-indent: 1rem;
 }
 .rw-words-1 span, .rw-words-1 span:nth-child(2), .rw-words-1 span:nth-child(3) {
 	color: #FF443A;
@@ -85,27 +91,81 @@
 @media (max-width:991px){
 
 	#main_hero {
-	    background-position-y: 0%;
-	    background-position-x: 60%;
+    background-position-y: 0%;
+    background-position-x: 60%;
 	}
 
 	#mainwrap {
     font-size: 2rem;
     margin-top: 13rem;
 }
+	#site {
+		display: inline;
+		margin-bottom: 1rem;
+	}
 }
 
 @media (max-width: 480px) {
-#mainwrap {
+	#mainwrap {
     font-size: 1.6rem;
-    margin-top: 23rem;
+    margin-top: 20rem;
     margin-bottom: 93rem;
+	}
+	#main_hero {
+		position: fixed;
+		overflow: scroll;
+		padding-top: 1rem;
+		}
+	.navbar-header {
+		position: fixed;
+		z-index: 999;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+    margin: 6rem -15px;
+    padding: 0 15px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "GothamPro";
+    font-weight: 500;
+    background: rgba(0,0,0,0.3);
+    z-index: 998;
+    position: fixed;
+    width: 100%;
 }
-#main_hero {
-position: fixed;
-overflow: scroll;
+
+	.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 0.6);
 }
-.navbar-header {
-	position: fixed;
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-toggle {
+    background-color: transparent;
+    border: 2px solid black;
+		border-color:black!important;
+}
+	.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+	.nav>li {
+    position: relative;
+    display: block;
+    text-align: right;
+}
+	#site {
+		display: inline;
+}
+
+	.rw-words-1 span, .rw-words-1 span:nth-child(2), .rw-words-1 span:nth-child(3) {
+		color: #FF443A;
+	  position: relative;
+		opacity: 1;
+		overflow: auto;
+}
+
+	.rw-words-1 span, .rw-words-1 span:nth-child(2), .rw-words-1 span:nth-child(3) {
+		-webkit-animation: initial;
+		-ms-animation: initial;
+		animation: initial;
 }
 }
