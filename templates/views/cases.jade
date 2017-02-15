@@ -74,9 +74,9 @@ mixin question(number, category, url_to)
     each post in data.posts 
       each cat in post.categories
         if cat.name==category.name
-          if post.state == "published"
-            +table-case(c+1, post)
-            -c++;
+          //- if post.state == "published"
+          +table-case(c+1, post)
+          -c++;
   //- unless browser.touch
   +emptyrow(number+1)
 
