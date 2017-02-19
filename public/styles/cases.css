@@ -573,7 +573,7 @@ h4 a.active::before {
   }
 
   .navbar {
-    padding: 0 0 50px;
+    padding: 0;
     margin: 0;
   }
 
@@ -587,5 +587,20 @@ h4 a.active::before {
       border-bottom: 2px solid #ff443a;
   }
 
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+       border-color: #ff443a;
+  }
+
+  .navbar-collapse {
+    color: black;
+    font-size: 1.8rem;
+    margin-top: 8rem;
+    overflow-x: visible;
+    padding: 0 20px;
+    text-align: right;
+    border-bottom: 2px solid #ff443a;
+    margin-left: -30px;
+    margin-right: -30px;
+}
 
 }
