@@ -87,6 +87,20 @@ block content
 
   .container_excel
     //- unless browser.touch
+    div(role="navigation").navbar.navbar-default.mob
+      .container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') 
+            img#logo(src="/images/braintobrain_logo_on_w.svg")
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            each link in navLinks
+              li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
     .row.abc
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: #box-tri.box.cell-A
         img#tri(src="/images/cell_triangle.svg")
@@ -100,7 +114,7 @@ block content
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .box.cell-A: |H
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .box.cell-A: |I
     +emptyrow(1)
-    .row.braintobrain_logo
+    .row.braintobrain_logo.nomob
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1: .cell-num: |2
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .celllogo

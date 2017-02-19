@@ -430,10 +430,6 @@ h4 a.active::before {
     padding-bottom: 4rem;
 	}
 
-	.question {
-		padding: 20px 0;
-	}
-
 	.mob {
 		display: block;
 	}
@@ -503,8 +499,6 @@ h4 a.active::before {
 		color: white;
 	}
 
-
-
 	.cell.user::before {
 		content: "Клиент:";
 	}
@@ -530,17 +524,27 @@ h4 a.active::before {
 		text-transform: uppercase;
 	}
 
-	.container > .row {
-		margin: 1rem 0;
-		width: 100%;
+
+  .flexbox-info-container > .row {
+    margin: 1rem 0;
+    width: 100%;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
-	}
+  }
 
 	.row {
 		background-color: white;
 	}
+
+  .row.question{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .row.question ~ .row.question{
+    padding: 2rem 0;
+  }
 
 	.cell {
 		font-size: 1.6rem;
@@ -555,9 +559,32 @@ h4 a.active::before {
 		padding: 1rem !important;
 	}
 
-
   .row.empty, .row.abc, .row.cli, .row.tablehead {
     display:none;
+  }
+
+  .navbar-default {
+      background-color: white;
+      border-color: white;
+  }
+
+  .navbar-default * .row {
+    border-bottom: 0px solid white;
+  }
+
+  .navbar {
+    padding: 0 0 50px;
+    margin: 0;
+  }
+
+  .navbar-header {
+      z-index: 9999;
+      background: white;
+      margin-left: -30px;
+      padding-left: 15px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ff443a;
   }
 
 
