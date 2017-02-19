@@ -426,8 +426,8 @@ h4 a.active::before {
 	}
 
 	.braintobrain_logo {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
 	}
 
 	.question {
