@@ -1,13 +1,13 @@
 extends ../layouts/default
 
-block header
+block header	
 	#header
 
 		//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 		//- ... or completely change this header to suit your design.
 
 		div(role="navigation").navbar.navbar-default
-			.container-fluid
+			.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 				.navbar-header
 					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
 						span.sr-only Toggle navigation
@@ -17,16 +17,9 @@ block header
 					a.navbar-brand(href='/') 
 						img#logo(src="/images/braintobrain_logo_on_w.svg")
 				.collapse.navbar-collapse
-					ul.nav.navbar-nav.navbar-left
+					ul.nav.navbar-nav.navbar-right
 						each link in navLinks
 							li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-					ul.nav.navbar-nav.navbar-right
-						if user
-							if user.canAccessKeystone
-								li: a(href='/keystone') Open Keystone
-							li: a(href='/keystone/signout') Sign Out
-						else
-							li: a(href='/keystone/signin') Sign In
 
 mixin post(post, id)
 	.post(data-ks-editable=editable(user, {list: 'Post', id: post.id }), id=post.id)
@@ -50,50 +43,62 @@ mixin post(post, id)
 		//- if post.content.extended
 		//- 	p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
-block intro
-	.container
-		h1= data.category ? data.category.name : 'Blog'
+block intro 
+	figure
+		.videoWrapper
+			iframe(src='https://www.youtube.com/embed/Jh5zxugC3Qg?version=3&loop=1&VQ=HD720&autoplay=1&showinfo=0&playlist=Jh5zxugC3Qg' frameborder="0")
+		//- video(autoplay)
+		//- 	source(src="https://player.vimeo.com/video/90665185?autoplay=1&loop=1&title=0&byline=0&portrait=0")
+	.herotext
+		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+			p#hero_head
+				|коллективный интеллект
+			p#hero_lead
+				|как вместе мочь больше?
 
-block content
-	.container
-		.row
-			.col-sm-9
-				h1.head Сила коллективного интеллекта
-			.col-sm-3
-				#logowrap
-					img#logo(src="images/logo.svg")
-					h6.logotext интеллектуальное агентство
-		.row
-			.col-sm-12.col-md-12
-					if data.posts.results.length
-						//- if data.posts.totalPages > 1
-						//- 	h4.text-weight-normal Showing 
-						//- 		strong #{data.posts.first}
-						//- 		|  to 
-						//- 		strong #{data.posts.last}
-						//- 		|  of 
-						//- 		strong #{data.posts.total}
-						//- 		|  posts.
-						//- else
-						//- 	h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
-						.blog
-							each post in data.posts.results
-								+post(post, id)
-						
-						//- if data.posts.totalPages > 1
-						//- 	ul.pagination
-						//- 		if data.posts.previous
-						//- 			li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
-						//- 		else
-						//- 			li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-						//- 		each p, i in data.posts.pages
-						//- 			li(class=data.posts.currentPage == p ? 'active' : null)
-						//- 				a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-						//- 		if data.posts.next
-						//- 			li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
-						//- 		else
-						//- 			li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
-
-			
+//- block intro
+//- 	.container
+//- 		h1= data.category ? data.category.name : 'Blog'
+//- 
+//- block content
+//- 	.container
+//- 		.row
+//- 			.col-sm-9
+//- 				h1.head Сила коллективного интеллекта
+//- 			.col-sm-3
+//- 				#logowrap
+//- 					img#logo(src="images/logo.svg")
+//- 					h6.logotext интеллектуальное агентство
+//- 		.row
+//- 			.col-sm-12.col-md-12
+//- 					if data.posts.results.length
+//- 						//- if data.posts.totalPages > 1
+//- 						//- 	h4.text-weight-normal Showing 
+//- 						//- 		strong #{data.posts.first}
+//- 						//- 		|  to 
+//- 						//- 		strong #{data.posts.last}
+//- 						//- 		|  of 
+//- 						//- 		strong #{data.posts.total}
+//- 						//- 		|  posts.
+//- 						//- else
+//- 						//- 	h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+//- 						.blog
+//- 							each post in data.posts.results
+//- 								+post(post, id)
+//- 						
+//- 						//- if data.posts.totalPages > 1
+//- 						//- 	ul.pagination
+//- 						//- 		if data.posts.previous
+//- 						//- 			li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
+//- 						//- 		else
+//- 						//- 			li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+//- 						//- 		each p, i in data.posts.pages
+//- 						//- 			li(class=data.posts.currentPage == p ? 'active' : null)
+//- 						//- 				a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+//- 						//- 		if data.posts.next
+//- 						//- 			li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
+//- 						//- 		else
+//- 						//- 			li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
+//- 
+//- 			
 block js
-	script(src="/js/app.js")
