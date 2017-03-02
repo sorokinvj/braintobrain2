@@ -23,68 +23,61 @@ block header
 
 mixin post(post, id)
 	.post(data-ks-editable=editable(user, {list: 'Post', id: post.id }), id=post.id)
-		h2.headers: a(href='/blog/post/' + post.slug)!= post.content.frontpage
-		//- p.lead.text-muted Posted 
-		//- 	if post.publishedDate
-		//- 		| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
-		//- 	if post.categories && post.categories.length
-		//- 		| in 
-		//- 		each cat, i in post.categories
-		//- 			a(href='/blog/' + cat.key)= cat.name
-		//- 			if i < post.categories.length - 1
-		//- 				| , 
-		//- 			else
-		//- 				|  
-			//- if post.author
-			//- 	| by #{post.author.name.first}
-		//- if post.image.exists
-		//- 	img(src=post._.image.fit(160,160)).img.pull-right
-		//- p!= post.content.brief
-		//- if post.content.extended
-		//- 	p.read-more: a(href='/blog/post/' + post.slug) Read more...
+		.container
+			.row 
+			.col-xs-12.col-sm-1.col-sm-offset-1.col-md-1.col-md-offset-1
+				if post.state == 'published'
+					.blog-date
+						!=post._.publishedDate.format('DD.MM.YY')
+			.col-xs-12.col-sm-10.col-md-5
+				if post.categories && post.categories.length
+					each cat, i in post.categories
+						if cat.NoShow != true
+							a.blog-tags(href='/blog/' + cat.key)= cat.name
+								if i < post.categories.length - 1
+									|,&nbsp;
+								else	
+									&nbsp;
+				h1.blog-heading
+					a(href='/blog/post/' + post.slug)!= post.title
+				h2.blog-lead: !=post.content.brief
+
+			.col-xs-12.col-sm-10.col-md-5
+				if post.image.exists
+					img(src=post._.image.fit(400,400)).img.pull-right
+
 
 block intro 
 	figure
 		.videoWrapper
-			iframe(src='https://www.youtube.com/embed/Jh5zxugC3Qg?version=3&loop=1&VQ=HD720&autoplay=1&showinfo=0&playlist=Jh5zxugC3Qg' frameborder="0")
-		//- video(autoplay)
-		//- 	source(src="https://player.vimeo.com/video/90665185?autoplay=1&loop=1&title=0&byline=0&portrait=0")
+			video(autoplay loop)
+				source(src="/video/murmur2.webm", type="video/webm")
+				source(src="/video/murmur2.mp4", type="video/mp4")
+
 	.herotext
 		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 			p#hero_head
 				|коллективный интеллект
 			p#hero_lead
-				|как вместе мочь больше?
+				|как вместе уметь больше?
 
 //- block intro
-//- 	.container
 //- 		h1= data.category ? data.category.name : 'Blog'
 //- 
-//- block content
-//- 	.container
-//- 		.row
-//- 			.col-sm-9
-//- 				h1.head Сила коллективного интеллекта
-//- 			.col-sm-3
-//- 				#logowrap
-//- 					img#logo(src="images/logo.svg")
-//- 					h6.logotext интеллектуальное агентство
-//- 		.row
-//- 			.col-sm-12.col-md-12
-//- 					if data.posts.results.length
-//- 						//- if data.posts.totalPages > 1
-//- 						//- 	h4.text-weight-normal Showing 
-//- 						//- 		strong #{data.posts.first}
-//- 						//- 		|  to 
-//- 						//- 		strong #{data.posts.last}
-//- 						//- 		|  of 
-//- 						//- 		strong #{data.posts.total}
-//- 						//- 		|  posts.
-//- 						//- else
-//- 						//- 	h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
-//- 						.blog
-//- 							each post in data.posts.results
-//- 								+post(post, id)
+block content
+						//- if data.posts.totalPages > 1
+						//- 	h4.text-weight-normal Showing 
+						//- 		strong #{data.posts.first}
+						//- 		|  to 
+						//- 		strong #{data.posts.last}
+						//- 		|  of 
+						//- 		strong #{data.posts.total}
+						//- 		|  posts.
+						//- else
+						//- 	h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+						.blog
+							each post in data.posts.results
+								+post(post, id)
 //- 						
 //- 						//- if data.posts.totalPages > 1
 //- 						//- 	ul.pagination
