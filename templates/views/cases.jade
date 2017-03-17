@@ -7,67 +7,87 @@ block css
 mixin emptyrow(number)
   .row.empty
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.с3: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a3: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a4: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a5: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a6: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a9: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a10: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a11: .empty_cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a12: .empty_cell
     
 mixin clients(number, client1, client2, client3, client4)
-  .row.empty
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.client: !=client1
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell.client: !=client2
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell.client: !=client3
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .cell.client: !=client4
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .cell
-        
+  if (client2 == null && client3 == null && client4 == null)
+    .row
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1.cell-num: =number
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3.cell
+      .col-lg-2.col-md-2.col-sm-2.col-xs-12.a3: .cell.client: !=client1
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a4: .cell.client: !=client2
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a5: .cell.client: !=client3
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a6: .cell.client: !=client4
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a9: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a10: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a11: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .cell
+  else
+    .row
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1.cell-num: =number
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3.cell
+      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a3: .cell.client: !=client1
+      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a4: .cell.client: !=client2
+      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a5: .cell.client: !=client3
+      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a6: .cell.client: !=client4
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .cell  
+    
 mixin tablehead(number)
   .row.tablehead
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1.cell-num: =number
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4.cell.b: Клиент
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5.cell.b: Бизнес-проблема
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6.cell.b: Что сделали
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7.cell.b: Результат
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8.cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9.cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10.cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3.cell
+    .col-lg-2.col-md-1.col-sm-1.col-xs-12.a3.cell.b: Клиент
+    .col-lg-2.col-md-1.col-sm-2.col-xs-12.a4.cell.b: Бизнес-проблема
+    .col-lg-2.col-md-1.col-sm-1.col-xs-12.a5.cell.b: Что сделали
+    .col-lg-2.col-md-1.col-sm-2.col-xs-12.a6.cell.b: Результат
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7.cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8.cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11.cell
   
 mixin table-case(number, post)
   .row
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.user 
+    .col-lg-2.col-md-1.col-sm-1.col-xs-12.a3: .cell.user 
       if (post.content.extended)
         a(href='/blog/post/' + post.slug)
           h4: =post.cases.client
       else
         h4: =post.cases.client
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .cell.problem: =post.cases.problem
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .cell.product: =post.cases.product
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .cell.result: =post.cases.result
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .cell
+    .col-lg-2.col-md-1.col-sm-2.col-xs-12.a4: .cell.problem: =post.cases.problem
+    .col-lg-2.col-md-1.col-sm-1.col-xs-12.a5: .cell.product: =post.cases.product
+    .col-lg-2.col-md-1.col-sm-2.col-xs-12.a6: .cell.result: =post.cases.result
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .cell
         
 mixin question(number, category, url_to)
   -var count=number;
   .row.question
     .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1: .cell-num: =number
     .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3: .cell
-    .col-lg-4.col-md-4.col-sm-4.col-xs-12.c456: .cell_heading.nohover
+    .col-lg-5.col-md-5.col-sm-5.col-xs-12.a4: .cell_heading.nohover
       h3.heading: a(href="#"+url_to)=category.heading
-    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c7: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c8: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c9: .cell
-    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c10: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a5: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a6: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a7: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a8: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a9: .cell
+    .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c11: .cell
   div.flexbox-info-container(id=url_to).container.sec
     -var c=number+1;
     +tablehead(c)
@@ -84,14 +104,13 @@ mixin question(number, category, url_to)
       
     
 block content
-
   .container_excel
     //- unless browser.touch
     div(role="navigation").navbar.navbar-default.mob
       .container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1
-        .navbar-header
+        .navbar-header.mob
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            span.sr-only Toggle navigation
+            span.sr-only Включить навигацию
             span.icon-bar
             span.icon-bar
             span.icon-bar
@@ -104,28 +123,34 @@ block content
     .row.abc
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: #box-tri.box.cell-A
         img#tri(src="/images/cell_triangle.svg")
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .box.cell-A: |A
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .box.cell-A: |B
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .box.cell-A: |C
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .box.cell-A: |D
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .box.cell-A: |E
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .box.cell-A: |F
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .box.cell-A: |G
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .box.cell-A: |H
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .box.cell-A: |I
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a2: .box.cell-A: |A
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a3: .box.cell-A: |B
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a4: .box.cell-A: |C
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a5: .box.cell-A: |D
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a6: .box.cell-A: |E
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .box.cell-A: |F
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .box.cell-A: |G
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a9: .box.cell-A: |H
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a10: .box.cell-A: |I
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a11: .box.cell-A: |J    
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a12: .box.cell-A: |K
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .box.cell-A: |L
+
     .row.braintobrain_logo.nomob
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1: .cell-num: |2
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .celllogo
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1.cell-num: |2
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3.cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a4.celllogo
         a(href="http://braintobrain.ru")
           img#logo(src="/images/braintobrain_logo_on_w.svg")
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c5: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c6: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c7: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c8: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c9: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c10: .cell
-    //- unless browser.touch
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a5: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a6: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a7: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a8: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a9: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a10: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a11: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a12: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a13: .cell
     +emptyrow(3)
     +emptyrow(4)
     -var count = 4;
@@ -134,38 +159,36 @@ block content
       -count=count+2;
     //- unless browser.touch
     +emptyrow(count)
-    .row.cli
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =count+1
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .cell.client: b: Наши клиенты
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
-    +clients(count+2, "Кофемания", "Yandex Data Factory", "Вольное дело", "Финансовый университет")
-    +clients(count+3, "Никола-Ленивец", "City Golf", "Варенйъе", "Teamwork=")
-    +clients(count+4, "Форсайт-флот", "Батяня", "Кухня Family", "Хрупкие люди")
-    +emptyrow(count+5)
+    +clients(count+2, "<b>Наши клиенты:</b>")
+    +clients(count+3, "Кофемания", "Yandex Data Factory", "Вольное дело", "Финансовый университет")
+    +clients(count+4, "Никола-Ленивец", "City Golf", "Варенйъе", "Teamwork=")
+    +clients(count+5, "Форсайт-флот", "Батяня", "Кухня Family", "Хрупкие люди")
+    +emptyrow(count+6)
     .row.contacts
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =count+6
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4.cell.client: b: Контакты
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c5.cell.client
-        p.mob +79250740171
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c6.cell.client
-        a.mob(href="mailto:hello@braintobrain.ru")
-          |hello@braintobrain.ru
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c7.cell.client
-        a.mob(href="https://www.facebook.com/braintobrain.ru")
-          |facebook
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c8: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .empty_cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .empty_cell
-    +clients(count+7, "+79250740171")
-    +clients(count+8, "<a href='mailto:hello@braintobrain.ru'>hello@braintobrain.ru</a>")
-    +clients(count+9, '<a href="https://www.facebook.com/braintobrain.ru/">facebook</a>')
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1.cell-num: =count+7
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3.empty_cell
+      .col-lg-2.col-md-1.col-sm-2.col-xs-12.a3
+        .cell.client: b: Контакты:
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a4
+        .cell.client
+          p.mob +79250740171
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a5
+        .cell.client
+          a.mob(href="mailto:hello@braintobrain.ru")
+            |hello@braintobrain.ru
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a6
+        .cell.client
+          a.mob(href="https://www.facebook.com/braintobrain.ru")
+            |facebook
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7.empty_cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8.empty_cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a9.empty_cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a10.empty_cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.a11.empty_cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11.empty_cell
+    +clients(count+8, "+79250740171")
+    +clients(count+9, "<a href='mailto:hello@braintobrain.ru'>hello@braintobrain.ru</a>")
+    +clients(count+10, '<a href="https://www.facebook.com/braintobrain.ru/">facebook</a>')
     -var c = count + 10;
     -for (var i=count+10;i<30;i++)
       +emptyrow(i)

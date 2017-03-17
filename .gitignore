@@ -32,3 +32,6 @@ node_modules
 
 # ignore video folder
 public/video
+
+#ignore compiled css
+public/styles/site.min.css
