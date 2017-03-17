@@ -1,50 +1,46 @@
 extends ../layouts/default
 
 block header	
-	#header
+	div(role="navigation").navbar.navbar-default
+		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1
+			.navbar-header
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='/') 
+					img#logo(src="/images/braintobrain_logo_on_w.svg")
+			.collapse.navbar-collapse
+				ul.nav.navbar-nav.navbar-right
+					each link in navLinks
+						li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 
-		//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-		//- ... or completely change this header to suit your design.
-
-		div(role="navigation").navbar.navbar-default
-			.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-						span.sr-only Toggle navigation
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a.navbar-brand(href='/') 
-						img#logo(src="/images/braintobrain_logo_on_w.svg")
-				.collapse.navbar-collapse
-					ul.nav.navbar-nav.navbar-right
-						each link in navLinks
-							li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 
 mixin post(post, id)
 	.post(data-ks-editable=editable(user, {list: 'Post', id: post.id }), id=post.id)
 		.container
 			.row 
-			.col-xs-12.col-sm-1.col-sm-offset-1.col-md-1.col-md-offset-1
-				if post.state == 'published'
-					.blog-date
-						!=post._.publishedDate.format('DD.MM.YY')
-			.col-xs-12.col-sm-10.col-md-5
-				if post.categories && post.categories.length
-					each cat, i in post.categories
-						if cat.NoShow != true
-							a.blog-tags(href='/blog/' + cat.key)= cat.name
-								if i < post.categories.length - 1
-									|,&nbsp;
-								else	
-									&nbsp;
-				h1.blog-heading
-					a(href='/blog/post/' + post.slug)!= post.title
-				h2.blog-lead: !=post.content.brief
+				.col-xs-12.col-sm-1.col-md-1
+					if post.state == 'published'
+						.blog-date
+							!=post._.publishedDate.format('DD.MM.YY')
+				.col-xs-12.col-sm-10.col-md-5
+					if post.categories && post.categories.length
+						each cat, i in post.categories
+							if cat.NoShow != true
+								a.blog-tags(href='/blog/' + cat.key)= cat.name
+									if i < post.categories.length - 1
+										|,&nbsp;
+									else	
+										&nbsp;
+					h1.blog-heading
+						a(href='/blog/post/' + post.slug)!= post.title
+					h2.blog-lead: !=post.content.brief
 
-			.col-xs-12.col-sm-10.col-md-5
-				if post.image.exists
-					img(src=post._.image.fit(400,400)).img.pull-right
+				.col-xs-12.col-sm-10.col-md-5
+					if post.image.exists
+						img(src=post._.image.fit(400,400)).img.pull-right
 
 
 block intro 
@@ -55,7 +51,7 @@ block intro
 				source(src="/video/murmur2.mp4", type="video/mp4")
 
 	.herotext
-		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-1
 			p#hero_head
 				|коллективный интеллект
 			p#hero_lead

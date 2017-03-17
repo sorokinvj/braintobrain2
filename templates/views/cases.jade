@@ -113,13 +113,12 @@ block content
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c9: .box.cell-A: |G
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c10: .box.cell-A: |H
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11: .box.cell-A: |I
-    +emptyrow(1)
     .row.braintobrain_logo.nomob
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c1: .cell-num: |2
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c3: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c4: .celllogo
         a(href="http://braintobrain.ru")
-          img#logo(src="/images/braintobrain_agency_logo_on_w.svg")
+          img#logo(src="/images/braintobrain_logo_on_w.svg")
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c5: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c6: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c7: .cell
@@ -128,6 +127,7 @@ block content
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.c10: .cell
     //- unless browser.touch
     +emptyrow(3)
+    +emptyrow(4)
     -var count = 4;
     each category, val in data.categories  
       +question(count,category,"url" + val)
