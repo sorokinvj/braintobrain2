@@ -60,6 +60,10 @@ margin-top: 3rem;
 	animation-delay: 8s;
 }
 
+.col-lg-hidden, .col-md-hidden {
+	display:none;
+}
+
 @-webkit-keyframes rotateWord {
   0% { opacity: 0; }
   2% { opacity: 0; -webkit-transform: translateY(-30px); }
@@ -105,9 +109,22 @@ margin-top: 3rem;
 		display: inline;
 		margin-bottom: 1rem;
 	}
+	.col-lg-hidden, .col-md-hidden {
+		display:block;
+	}
+	.col-sm-1 {
+		    border-right: solid 1px #dcdcdc;
+}
 }
 
 @media (max-width: 480px) {
+
+	#main_hero {
+	  background: url('../images/main_personal_mob.png');
+	  background-size: cover;
+	  height:100vh;
+	}
+
 	#mainwrap {
     font-size: 1.6rem;
     margin-top: 20rem;

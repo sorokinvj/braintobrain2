@@ -570,4 +570,8 @@ h4 a.active::before {
     margin-right: -30px;
 }
 
+.a7, .a8, .c11 {
+  display: none;
+}
+
 }
