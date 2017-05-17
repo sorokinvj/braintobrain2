@@ -145,12 +145,15 @@ block content
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.a4.celllogo
         a(href="http://braintobrain.ru")
           img#logo(src="/images/braintobrain_logo_on_w.svg")
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a5: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a5: .cell.nohover
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a6: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a7: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a8: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a9: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a10: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a8: .cell.nohover 
+        span#ncase Кейсы
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a9: .cell.nohover
+        a.casenav(href="http://beta.braintobrain.ru/blog")Блог
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a10: .cell.nohover
+        a.casenav(href="http://beta.braintobrain.ru/contact")Контакты
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a11: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a12: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a13: .cell
@@ -164,7 +167,7 @@ block content
     +emptyrow(count)
     +clients(count+2, "<b>Наши клиенты:</b>")
     +clients(count+3, "Кофемания", "Yandex Data Factory", "Вольное дело", "Финансовый университет")
-    +clients(count+4, "Никола-Ленивец", "City Golf", "Варенйъе", "Teamwork=")
+    +clients(count+4, "Никола-Ленивец", "City Golf", "Варенйъе", "РЭУ им.Плеханова")
     +clients(count+5, "Форсайт-флот", "Батяня", "Кухня Family", "Хрупкие люди")
     +emptyrow(count+6)
     .row.contacts

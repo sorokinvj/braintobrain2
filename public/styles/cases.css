@@ -189,8 +189,22 @@ a {
   padding: 1rem;
 }*/
 .celllogo {
-	padding: 1rem;
+  padding: 1rem 0;
 }
+
+a.casenav, span#ncase {
+  text-transform: uppercase;
+  font-family: "GothamPro";
+  letter-spacing: 1.3px;
+  font-weight: 500;
+}
+a.casenav {
+  color: rgba(0,0,0,0.8);
+}
+span#ncase {
+  color: #ff443a;
+}
+
 
 .cell:not(.nohover):hover,
 .empty_cell:hover,
@@ -326,12 +340,13 @@ h4 a.active::before {
 		max-width: 2%;
 	}
 
-
-
-
 	.heading {
 		font-size: 2.7rem;
 	}
+  .container_excel {
+    margin: 0 auto;
+    width: 1750px;
+}
 }
 
 @media (max-width:550px) {
