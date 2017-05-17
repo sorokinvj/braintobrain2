@@ -41,7 +41,7 @@ mixin post(post, id)
 				.col-xs-12.col-sm-10.col-md-5
 					if post.image.exists
 						div.imagewrap
-							img(src=post._.image.fit(400,400)).img.pull-right
+							img(src=post._.image.thumbnail(400)).img.pull-right
 
 
 block intro 
