@@ -83,21 +83,7 @@ block content
 //
 								
 block footer
-	footer
-		.container: .row 
-			.col-xs-12.col-sm-10.col-sm-offset-1.col-md-4.col-md-offset-2
-				.mailto
-					a(href="mailto:hello@braintobrain.ru")
-						| hello@braintobrain.ru
-					a#facebook(href="https://www.facebook.com/braintobrain.ru/")
-						img(src='/images/fb.svg' width=60)
-			.col-xs-12.col-sm-10.col-sm-offset-1.col-md-2.col-md-offset-2
-					ul.nav.navbar-nav
-						each link in navLinks
-							li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label	
-			.col-xs-12.col-sm-10.col-sm-offset-1.hidden-md
-					a.navbar-brand(href='/') 
-							img#logo(src="/images/braintobrain_agency_logo_on_w.svg")
+
 
 
 block js

@@ -73,6 +73,22 @@ html
 
 		//- FOOTER
 		block footer
+			footer
+				#foot.container
+					.row 
+						ul.nav.navbar-nav
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label	
+				
+					.row
+						a(href="https://t.me/creativity101")
+							img(src='/images/telegram_card.svg')#telegram
+						a(href="https://www.facebook.com/braintobrain.ru/")
+							img(src='/images/fb_card.svg')#fb
+
+								
+
+
 		//- JAVASCRIPT
 
 		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
@@ -90,6 +106,7 @@ html
 			script(src='/keystone/js/content/editor.js')
 
 		//- Add scripts that are globally required by your site here.
+
 
 		//- Include template-specific javascript files by extending the js block
 		block js
