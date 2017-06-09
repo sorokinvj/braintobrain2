@@ -108,6 +108,55 @@ position: fixed;
     background-color: transparent;
 }
 
+footer {
+    background: url(/images/footer_mob.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-top: 2px solid #ff443a;
+    min-height: 100vh;
+}
+
+#fb {
+    width: 6rem;
+    margin: -50% 0 0 0;
+}
+
+#telegram {
+  width: 8rem;
+  margin: 47% 0 0 43%;
+}
+
+
+footer * .navbar-nav {
+    text-align: right;
+    padding: 4rem 2rem;
+}
+
+@media (min-width:375px) {
+
+  #fb {
+    width: 7rem;
+    margin: -47% 0 0 0;
+  }
+
+  #telegram {
+    width: 9rem;
+    margin: 47% 0 0 44%;
+  }
+footer * .navbar-nav {
+    padding: 6rem 2rem;
+    font-size: 1.6rem;
+}
+}
+
+@media (min-width:413px) {
+    #telegram {
+    width: 11rem;
+    margin: 57% 0 0 44%;
+  }
+}
+
 // ************************
 // MEDIA 768PX
 // ************************
