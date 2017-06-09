@@ -51,25 +51,24 @@ h1 {
   margin:0;
 }
 
+.navbar-default {
+    background-color: white;
+    border: 0;
+}
+
 .navbar {
     position: relative;
     min-height: 50px;
-    padding: 10px 0;
-    border: 1px solid transparent;
+    margin:0;
+    border:0;
 }
 
 .navbar-brand {
     width: 75%;
     float: left;
-    padding: 15px 15px 15px 0;
     font-size: 18px;
     line-height: 20px;
     height: 50px;
-}
-
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
 }
 
 .navbar-default .navbar-toggle {
@@ -81,28 +80,29 @@ h1 {
 }
 
 .navbar-header {
-position: fixed;
+    position: fixed;
+    padding: 1rem 0;
+    z-index: 2;
+    background: white;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid #ff443a;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: black;
+  color: black;
 }
 
 .navbar-collapse {
-    color: black;
-    font-size: 1.8rem;
-    margin-top: 5rem;
-    overflow-x: visible;
-    padding:0;
-    /* border-top: 1px solid transparent; */
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    -webkit-overflow-scrolling: touch;
-    text-align: right;
+  color: black;
+  font-size: 1.8rem;
+  overflow-x: visible;
+  padding: 8rem 0 1rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  -webkit-overflow-scrolling: touch;
+  text-align: right;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: transparent;
-}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
     color: #ff443a;
     background-color: transparent;
@@ -115,6 +115,7 @@ footer {
     position: relative;
     border-top: 2px solid #ff443a;
     min-height: 100vh;
+    z-index: 3;
 }
 
 #fb {
