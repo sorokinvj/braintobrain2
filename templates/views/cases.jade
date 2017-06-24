@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block css 
-  link(href="/styles/flexboxgrid.css", rel="stylesheet")
+  link(href="/styles/flexboxgrid.min.css", rel="stylesheet")
   link(href="/styles/cases.css", rel="stylesheet")
 
 mixin emptyrow(number)
@@ -38,10 +38,10 @@ mixin clients(number, client1, client2, client3, client4)
     .row
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1.cell-num: =number
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3.cell
-      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a3: .cell.client: !=client1
-      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a4: .cell.client: !=client2
-      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a5: .cell.client: !=client3
-      .col-lg-2.col-md-2.col-sm-1.col-xs-12.a6: .cell.client: !=client4
+      .col-lg-2.col-md-2.col-sm-2.col-xs-12.a3: .cell.client: !=client1
+      .col-lg-2.col-md-2.col-sm-2.col-xs-12.a4: .cell.client: !=client2
+      .col-lg-2.col-md-2.col-sm-2.col-xs-12.a5: .cell.client: !=client3
+      .col-lg-2.col-md-2.col-sm-2.col-xs-12.a6: .cell.client: !=client4
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .cell
       .col-lg-hidden.col-md-hidden.col-sm-1.col-xs-12.a9: .cell
@@ -147,13 +147,14 @@ block content
           img#logo(src="/images/braintobrain_logo_on_w.svg")
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a5: .cell.nohover
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a6: .cell
-      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a7: .cell
+      .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a7: .cell.nohover
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a8: .cell.nohover 
-        span#ncase Кейсы
+        a.casenav(href="http://braintobrain.ru")Главная
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a9: .cell.nohover
-        a.casenav(href="http://beta.braintobrain.ru/blog")Блог
+        span#ncase Кейсы
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a10: .cell.nohover
-        a.casenav(href="http://beta.braintobrain.ru/contact")Контакты
+        a.casenav(href="http://beta.braintobrain.ru/blog")Блог
+      //- a.casenav(href="http://beta.braintobrain.ru/contact")Контакты
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a11: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a12: .cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-hidden.a13: .cell
@@ -192,7 +193,7 @@ block content
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.a10.empty_cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.a11.empty_cell
       .col-lg-1.col-md-1.col-sm-1.col-xs-12.c11.empty_cell
-    +clients(count+8, "+79250740171")
+    +clients(count+8, "<a href='tel:+79250740171'>+79250740171</a>")
     +clients(count+9, "<a href='mailto:hello@braintobrain.ru'>hello@braintobrain.ru</a>")
     +clients(count+10, '<a href="https://www.facebook.com/braintobrain.ru/">facebook</a>')
     -var c = count + 10;
