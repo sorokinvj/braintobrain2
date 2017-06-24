@@ -290,7 +290,6 @@ h4 a.active::before {
 	font-weight: 500;
   line-height: 1.5;
   font-size: inherit;
-
 }
 
 .cell > h4 {

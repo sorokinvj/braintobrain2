@@ -17,11 +17,12 @@ var _ = require('lodash');
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
+		{ label: 'Главная', key: 'index', href: '/' },
 		{ label: 'Кейсы', key: 'cases', href: '/cases' },
 		{ label: 'Блог', key: 'blog', href: '/blog' },
 		// { label: 'Контакты', key: 'contact', href: '/contact' },
-
 	];
+	
 	res.locals.user = req.user;
 
 	var bowser = require('node-bowser');
