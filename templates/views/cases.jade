@@ -53,9 +53,9 @@ mixin tablehead(number)
   .row.tablehead
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1.cell-num: =number
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3.cell
-    .col-lg-2.col-md-2.col-sm-1.col-xs-12.a3.cell.b: Клиент
+    .col-lg-2.col-md-2.col-sm-2.col-xs-12.a3.cell.b: Клиент
     .col-lg-2.col-md-2.col-sm-2.col-xs-12.a4.cell.b: Бизнес-проблема
-    .col-lg-2.col-md-2.col-sm-1.col-xs-12.a5.cell.b: Что сделали
+    .col-lg-2.col-md-2.col-sm-2.col-xs-12.a5.cell.b: Что сделали
     .col-lg-2.col-md-2.col-sm-2.col-xs-12.a6.cell.b: Результат
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7.cell
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8.cell
@@ -65,14 +65,14 @@ mixin table-case(number, post)
   .row
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c1: .cell-num: =number
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.c3: .cell
-    .col-lg-2.col-md-2.col-sm-1.col-xs-12.a3: .cell.user 
+    .col-lg-2.col-md-2.col-sm-2.col-xs-12.a3: .cell.user 
       if (post.content.extended)
         a(href='/blog/post/' + post.slug)
           h4: =post.cases.client
       else
         h4: =post.cases.client
     .col-lg-2.col-md-2.col-sm-2.col-xs-12.a4: .cell.problem: =post.cases.problem
-    .col-lg-2.col-md-2.col-sm-1.col-xs-12.a5: .cell.product: =post.cases.product
+    .col-lg-2.col-md-2.col-sm-2.col-xs-12.a5: .cell.product: =post.cases.product
     .col-lg-2.col-md-2.col-sm-2.col-xs-12.a6: .cell.result: =post.cases.result
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.a7: .cell
     .col-lg-1.col-md-1.col-sm-1.col-xs-12.a8: .cell

@@ -285,7 +285,7 @@ h4 a.active::before {
 	text-decoration: none;
 }
 
-.cell > a > h4 {
+.cell > a > h4, .cell > h4 {
 	color: #ff443a;
 	font-weight: 500;
   line-height: 1.5;
