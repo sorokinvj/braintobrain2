@@ -1,18 +1,115 @@
+
+#body figure {
+  display: none;
+}
+
 .herotext {
-    text-align: left;
-    top: -7rem;
     position: relative;
     font-family: "GothamPro";
+    margin: 20rem 0;
+}
+
+@media (min-width: 375px) {
+  .herotext {
+      margin: 25rem 0;
+  }
+}
+
+@media (min-width: 414px) {
+  .herotext {
+      margin: 28rem 0;
+  }
 }
 
 #hero_head {
     margin: 0;
     position: relative;
-    /* left: 46rem; */
     color: #ff443a;
     font-size: 4rem;
     font-weight: 200;
-    // text-shadow: 13px 13px 6px rgba(0, 0, 0, 0.47);
+    line-height: 1;
+}
+
+#hero_lead {
+    color: #8b8a8c;
+    position: relative;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.blog-date {
+    font-family: "GothamPro";
+    font-style: italic;
+    font-size: 1.4rem;
+    color: lightgray;
+    line-height: 1;
+}
+.blog-tags {
+    text-decoration: none;
+    color: lightgray;
+    font-family: "GothamPro";
+    font-size: 1.4rem;
+    font-style: italic;
+}
+.blog-heading, .blog-heading>a {
+    color: #ff443a;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 100;
+    font-family: "GothamPro";
+    margin: 1rem 0;
+}
+
+h2.blog-lead, h2.blog-lead>p {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    color: #909090;
+}
+
+.imagewrap {
+    overflow: hidden;
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 5rem 0;
+    border-radius: 4px;
+}
+
+.glyphicon {
+    color: #dddddd;
+}
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    background-color: #ff443a;
+    border-color: #ff443a;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #dddddd;
+}
+
+
+@media (min-width: 768px) {
+
+#body figure {
+  display: block;
+}
+
+.herotext {
+    text-align: left;
+    top: -7rem;
+    position: relative;
+    font-family: "GothamPro";
+    margin:0;
+}
+
+#hero_head {
+    margin: 0;
+    position: relative;
+    color: #ff443a;
+    font-size: 4rem;
+    font-weight: 200;
 }
 
 #hero_lead {
@@ -20,7 +117,6 @@
   position: relative;
   margin-top: 1rem;
   font-size: 1.8rem;
-  // text-shadow: 13px 13px 6px rgba(0, 0, 0, 0.47);
 }
 
 .blog-date {
@@ -31,14 +127,12 @@
     float: right;
 }
 
-.blog-heading, .blog-heading > a {
-
-      color: rgba(90, 90, 90, 0.67)!important;
-      font-size: 2.4rem;
-      line-height: 1.3;
-      /* baseline-shift: sub; */
-      font-weight: 500;
-      font-family: "GothamProNarrow";
+.blog-heading, .blog-heading>a {
+    color: #ff443a;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 100;
+    font-family: "GothamPro";
 }
 
 h2.blog-lead, h2.blog-lead>p {
@@ -52,25 +146,39 @@ h2.blog-lead, h2.blog-lead>p {
   color: lightgray;
   font-family: Helvetica;
   font-size: 1.6rem;
+  position: relative;
+  top: -0.8rem;
 }
 
 .imagewrap {
-  height:300px;
+    height: 230px;
 }
 
 .videoWrapper {
     position: relative;
-    height: 80%;
+    height: 100%;
     padding: 0;
     overflow: hidden;
-    width: 70%;
     margin: 0 auto;
 }
 
 .videoWrapper video {
   position: relative;
-  left: -25px;
-  height: 353px;
-  width: 106%;
+  height: 463px;
   top: 64px;
+}
+}
+
+
+@media (min-width: 992px) {
+
+  #hero_head {
+      font-size: 5rem;
+  }
+
+
+.imagewrap {
+  height:300px;
+}
+
 }

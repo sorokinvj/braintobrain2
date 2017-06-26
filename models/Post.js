@@ -39,5 +39,5 @@ Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
 
-Post.defaultColumns = 'cases.client|20%, title|40%, categories|40%';
+Post.defaultColumns = 'cases.client|20%, title|40%, categories|30%, state|10%';
 Post.register();

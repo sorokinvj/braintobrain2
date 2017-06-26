@@ -2,7 +2,7 @@ extends ../layouts/default
 
 block header	
 	div(role="navigation").navbar.navbar-default
-		.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1
+		.container: .row: .col-xs-12.col-sm-11.col-sm-offset-1.col-md-10.col-md-offset-1
 			.navbar-header
 				button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
 					span.sr-only Toggle navigation
@@ -25,7 +25,7 @@ mixin post(post, id)
 					if post.state == 'published'
 						.blog-date
 							!=post._.publishedDate.format('DD.MM.YY')
-				.col-xs-12.col-sm-10.col-md-5
+				.col-xs-12.col-sm-5.col-md-5
 					if post.categories && post.categories.length
 						each cat, i in post.categories
 							if cat.NoShow != true
@@ -38,10 +38,17 @@ mixin post(post, id)
 						a(href='/blog/post/' + post.slug)!= post.title
 					h2.blog-lead: !=post.content.brief
 
-				.col-xs-12.col-sm-10.col-md-5
+				.col-xs-12.col-sm-6.col-md-5
 					if post.image.exists
-						div.imagewrap
-							img(src=post._.image.thumbnail(400,267)).img.pull-right
+						if browser.touch
+							- var img = post._.image.fill(414,200,f_auto,center);		
+						if browser.desktop
+							- var img = post._.image.fill(457,300,f_auto,center);		
+						if browser.tablet
+							- var img = post._.image.fill(345,230,f_auto,center);	
+						a(href='/blog/post/' + post.slug)
+							div.imagewrap
+								img(src=img).img.pull-right
 
 
 block intro 
@@ -56,7 +63,7 @@ block intro
 			p#hero_head
 				|коллективный интеллект
 			p#hero_lead
-				|блог о том, как объединять мышление в группе и добиваться большего
+				|блог о том, как думать вместе и добиваться большего
 
 //- block intro
 //- 		h1= data.category ? data.category.name : 'Blog'
@@ -75,20 +82,22 @@ block content
 						.blog
 							each post in data.posts.results
 								+post(post, id)
-//- 						
-//- 						//- if data.posts.totalPages > 1
-//- 						//- 	ul.pagination
-//- 						//- 		if data.posts.previous
-//- 						//- 			li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
-//- 						//- 		else
-//- 						//- 			li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-//- 						//- 		each p, i in data.posts.pages
-//- 						//- 			li(class=data.posts.currentPage == p ? 'active' : null)
-//- 						//- 				a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-//- 						//- 		if data.posts.next
-//- 						//- 			li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
-//- 						//- 		else
-//- 						//- 			li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
-//- 
-//- 			
+							if data.posts.totalPages > 1
+								.container: .row: .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-1
+									ul.pagination
+										if data.posts.previous
+											li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
+										else
+											li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+										each p, i in data.posts.pages
+											li(class=data.posts.currentPage == p ? 'active' : null)
+												a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+										if data.posts.next
+											li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
+										else
+											li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
+
+							
+						
+						
 block js
