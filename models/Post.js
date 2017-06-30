@@ -28,7 +28,6 @@ Post.add({
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	content: {
-		frontpage: { type: Types.Html, wysiwyg: true, required: false, initial: false, label:"Заголовок для блога"},
 		brief: { type: Types.Html, wysiwyg: true, height: 150, label:"Лид" },
 		extended: { type: Types.Html, wysiwyg: true, height: 400, label:"Основной текст" },
 		cta: { type: Types.Html, wysiwyg: true, initial:false, label:"Call to action" },
@@ -39,5 +38,5 @@ Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
 
-Post.defaultColumns = 'cases.client|20%, title|40%, categories|30%, state|10%';
+Post.defaultColumns = 'cases.client, title|40%, categories|20%, publishedDate, state';
 Post.register();
