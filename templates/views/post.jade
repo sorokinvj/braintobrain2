@@ -59,13 +59,13 @@ block content
 							//- 	|  
 							//- if data.post.author
 							//- 	| by #{data.post.author.name.first}
-						.post
-							!= data.post.content.full
-						.tags_wrap
-							if data.post.categories && data.post.categories.length
-								each cat, cat_i in data.post.categories
-									if cat.NoShow != true
-										a.tags(href='/blog/' + cat.key)= cat.name		
-						.clearfix
-						.calltoaction
-							!=data.post.content.cta
+				.post
+					!= data.post.content.full
+				.tags_wrap
+					if data.post.categories && data.post.categories.length
+						each cat, cat_i in data.post.categories
+							if cat.NoShow != true
+								a.tags(href='/blog/' + cat.key)= cat.name		
+				.clearfix
+				.calltoaction
+					!=data.post.content.cta
