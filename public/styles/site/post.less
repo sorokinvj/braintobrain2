@@ -200,10 +200,10 @@ figure.image {
 pre {
     display: block;
     padding: 0;
-    margin: 1rem 0 1rem -1rem;
+    margin: 2rem 0 1rem -1rem;
     padding: 0 0 0 1rem;
     line-height: 1.5;
-    word-break: break-all;
+    word-break: normal;
     color: #b9b9b9;
     background-color: transparent;
     border: 0;
@@ -211,9 +211,13 @@ pre {
     font-family: "GothamPro";
     font-style: italic;
     font-weight: 100;
-    word-wrap: normal;
     border-left: 3px solid #ff443a;
     height: auto;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
 }
 
 
