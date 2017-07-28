@@ -4,7 +4,8 @@ block css
 	link(href="/styles/typograf.css", rel="stylesheet") 
 
 block head 
-	title = data.post.title
+	title=data.post.title
+	meta(property="og:url", content="'/blog/post/' + post.slug")
 	meta(property="og:title", content=data.post.title)
 	meta(property="og:description", content=data.post.content.brief)
 	meta(property="og:image", content=data.post._.image.fill(500,300,f_auto,center))
