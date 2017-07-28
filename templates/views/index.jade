@@ -1,5 +1,12 @@
 extends ../layouts/default
 
+block head
+	meta(property="og:type",content="website")
+	meta(property="og:url", content="http://braintobrain.ru")
+	meta(property="og:title", content="Сила коллективного интеллекта")
+	meta(property="og:description", content="Дизайн-мышление, стратегические и креативные сессии — мы помогаем командам быть успешными")
+	meta(property="og:image", content="http://braintobrain.ru/images/fb_og.png")
+
 block header	
 	div(role="navigation").navbar.navbar-default
 		.container: .row: .col-xs-12.col-sm-11.col-sm-offset-1.col-md-10.col-md-offset-1
