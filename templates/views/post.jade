@@ -5,7 +5,7 @@ block css
 
 block head 
 	title=data.post.title
-	- var posturl = '/blog/post/' + post.slug;
+	- var posturl = '/blog/post/' + data.post.slug;
 	meta(property="og:url", content=posturl)
 	meta(property="og:title", content=data.post.title)
 	meta(property="og:description", content=data.post.content.brief)
