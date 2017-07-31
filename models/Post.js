@@ -29,7 +29,7 @@ Post.add({
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	content: {
 		brief: { type: String, wysiwyg: true, height: 150, label:"Лид" },
-		extended: { type: Types.Html, wysiwyg: true, height: 400, label:"Основной текст" },
+		extended: { type: Types.Html, wysiwyg: true, height: 600, label:"Основной текст" },
 		cta: { type: Types.Html, wysiwyg: true, initial:false, label:"Call to action" },
 	},
 });
