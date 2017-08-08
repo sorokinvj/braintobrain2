@@ -204,14 +204,18 @@
     margin-top: 3rem;
 	}
 
-	#tools h1 {
-		text-align: center;
-    margin: 6rem 0 2rem;
-		}
+  #tools h1 {
+      width: 80%;
+      text-align: center;
+      margin: 6rem auto 2rem;
+      clear: both;
+  }
 
 	.tool {
     margin: 4rem 0;
 		font-size: 2.6rem;
+    height: 50px;
+
 	}
 
 	.img_wrap {
@@ -270,7 +274,10 @@
 	    width: 8%;
 	    margin: 0 5rem;
 	}
+}
 
-
-
+@media (min-width: 1201px) {
+#tools h1 {
+    width: 60%;
+}
 }
