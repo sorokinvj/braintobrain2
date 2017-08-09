@@ -25,7 +25,7 @@ keystone.init({
 	'session store':'mongo',
 
 	//tinymce
-	'wysiwyg additional plugins': 'image, media',
+	'wysiwyg additional plugins': 'image, media, autosave',
 	'wysiwyg cloudinary images': true,
 	'wysiwyg override toolbar': false,
 	'wysiwyg menubar': true,
