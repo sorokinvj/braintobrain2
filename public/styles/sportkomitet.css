@@ -1,0 +1,964 @@
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro/GothamPro.eot?') format('eot'),
+       url('../fonts/GothamPro/GothamPro.otf') format('opentype'),
+       url('../fonts/GothamPro/GothamPro.woff') format('woff'),
+       url('../fonts/GothamPro/GothamPro.ttf') format('truetype'),
+       url('../fonts/GothamPro/GothamPro.svg#GothamPro') format('svg');
+  font-weight: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Light/GothamPro-Light.eot?') format('eot'),
+       url('../fonts/GothamPro-Light/GothamPro-Light.otf') format('opentype'),
+       url('../fonts/GothamPro-Light/GothamPro-Light.woff') format('woff'),
+       url('../fonts/GothamPro-Light/GothamPro-Light.ttf') format('truetype'),
+       url('../fonts/GothamPro-Light/GothamPro-Light.svg#GothamPro-Light') format('svg');
+ font-weight: lighter;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Italic/GothamPro-Italic.eot?') format('eot'),
+       url('../fonts/GothamPro-Italic/GothamPro-Italic.otf') format('opentype'),
+       url('../fonts/GothamPro-Italic/GothamPro-Italic.woff') format('woff'),
+       url('../fonts/GothamPro-Italic/GothamPro-Italic.ttf') format('truetype'),
+       url('../fonts/GothamPro-Italic/GothamPro-Italic.svg#GothamProItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-Medium/GothamPro-Medium.eot?') format('eot'),
+       url('../fonts/GothamPro-Medium/GothamPro-Medium.otf') format('opentype'),
+       url('../fonts/GothamPro-Medium/GothamPro-Medium.woff') format('woff'),
+       url('../fonts/GothamPro-Medium/GothamPro-Medium.ttf') format('truetype'),
+       url('../fonts/GothamPro-Medium/GothamPro-Medium.svg#GothamPro-Medium') format('svg');
+ font-weight: 500;
+}
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-MediumItalic/GothamPro-MediumItalic.eot?') format('eot'),
+       url('../fonts/GothamPro-MediumItalic/GothamPro-MediumItalic.otf') format('opentype'),
+       url('../fonts/GothamPro-MediumItalic/GothamPro-MediumItalic.woff') format('woff'),
+       url('../fonts/GothamPro-MediumItalic/GothamPro-MediumItalic.ttf') format('truetype'),
+       url('../fonts/GothamPro-MediumItalic/GothamPro-MediumItalic.svg#GothamPro-MediumItalic') format('svg');
+ font-weight: 500;
+ font-style: italic;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro-BlackItalic/GothamPro-BlackItalic.eot?') format('eot'),
+       url('../fonts/GothamPro-BlackItalic/GothamPro-BlackItalic.otf') format('opentype'),
+       url('../fonts/GothamPro-BlackItalic/GothamPro-BlackItalic.woff') format('woff'),
+       url('../fonts/GothamPro-BlackItalic/GothamPro-BlackItalic.ttf') format('truetype'),
+       url('../fonts/GothamPro-BlackItalic/GothamPro-BlackItalic.svg#GothamPro-BlackItalic') format('svg');
+ font-weight: 900;
+ font-style: italic;
+}
+
+@font-face {
+  font-family: 'MetaPro';
+  src: url('../fonts/FFMetaPro/MetaPro-Book.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MetaPro';
+  src: url('../fonts/FFMetaPro/MetaPro-Normal.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Romanovsky';
+	src: url('../fonts/Romanovsky/Romanovsky Bold W03 Regular.eot?') format('eot'),
+       url('../fonts/Romanovsky/Romanovsky Bold W03 Regular.otf') format('opentype'),
+       url('../fonts/Romanovsky/Romanovsky Bold W03 Regular.woff') format('woff'),
+       url('../fonts/Romanovsky/Romanovsky Bold W03 Regular.ttf') format('truetype'),
+       url('../fonts/Romanovsky/Romanovsky Bold W03 Regular.svg#Romanovsky') format('svg');
+}
+
+html { font-size: 62.5%; }
+
+
+body {
+  padding:0;
+  margin: 0;
+}
+
+html, body {
+    /*max-width: 100%;*/
+    overflow-x: hidden;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+a {
+  color:#ff443a;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.mob {
+	display:none;
+}
+.navbar-default {
+	background: white;
+	border-bottom: #ff443a 4px solid;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: black;
+    text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-family: 'GothamPro';
+		font-size: 1.6rem;
+		font-weight: 900;
+}
+
+.navbar-nav > li > a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.navbar-brand > .logo_footer {
+	width: 180px;
+}
+
+.navbar-brand {
+    padding: 18px 15px;
+}
+
+#hero > h4 {
+	width:100%;
+	margin: 3rem auto 4rem;
+}
+
+h1, .hero_caption {
+  font-family: 'Romanovsky';
+  font-size: 6rem;
+  margin:0;
+  text-align: center;
+
+}
+
+.hero_caption {
+  padding-top: 57rem;
+  color:white;
+  font-size: 8rem;
+
+}
+
+h1 {
+  color:#0053b3;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 8rem;
+}
+
+
+.webp #hero  {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/main.webp');
+  background-size: cover;
+  background-position: 50% 50%;
+  /*height:100vh;*/
+}
+.no-webp #hero  {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/main.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+
+
+}
+
+h2 {
+	font-family: 'GothamPro';
+	font-size: 6rem;
+	font-weight: 900;
+	font-style: italic;
+	font-stretch: normal;
+	color: #ffffff;
+  margin:0;
+}
+
+h3 {
+	font-family: 'GothamPro';
+	font-size: 4rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.4;
+	text-align: center;
+	color: #0053b3;
+}
+
+h4 {
+	font-family: 'MetaPro';
+	font-size: 2.5rem;
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	text-align: center;
+	color: white;
+  margin: 2rem 0 5rem;
+}
+
+h5 {
+  font-family: 'MetaPro';
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  text-align: center;
+  color: #0053b3;
+  margin:7rem 0;
+}
+
+.b {
+  width: 292px;
+  height: 74px;
+  background-color: rgba(254, 254, 254, 0.3);
+  border: solid 3px #ffffff;
+  margin: 0 auto;
+  font-family: 'GothamPro';
+	font-size: 2.6rem;
+	font-weight: 900;
+	font-style: normal;
+	font-stretch: normal;
+	color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.7rem;
+  margin-bottom: 3rem;
+}
+
+#skills {
+	/*margin-top: 2rem;*/
+	margin-bottom: 10rem;
+}
+
+.skills_wrap {
+	font-family: 'MetaPro';
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.44;
+	text-align: left;
+	color: #0053b3;
+	/*margin:2.5rem;*/
+	padding: 2.5rem;
+	text-align: left;
+  height: 10rem;
+
+	/*border: 1px dashed #0053b3;*/
+}
+
+.skill_img {
+	width:40px;
+	margin-right: 1rem;
+}
+
+#empty{
+  height:60px;
+}
+
+#intro {
+  padding:10rem 0;
+}
+
+.divider {
+  margin:0 auto 10rem;
+
+}
+
+.row {
+  text-align: center;
+}
+
+.features {
+  font-family: 'MetaPro';
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.42;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #0053b3;
+  width:80%;
+  margin: 0 auto;
+}
+
+.features-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature_img {
+    margin-top: 4rem;
+    height: 10rem;
+    width: 20rem;
+}
+
+#places {
+  background: url('../images/sportkomitet/players.svg') no-repeat;
+  background-size: 80% 80%;
+  background-position: 40% 23%;
+}
+
+.boxee {
+  height: 46rem;
+  background-image: radial-gradient(circle at 51% 14%, #008bda, #0d2af7);
+  border: solid 3px #0053b3;
+  margin-bottom: 22rem;
+}
+
+.no-margin-bottom{
+  margin-bottom:0!important;
+}
+
+.place-name {
+  font-family: 'GothamPro';
+  font-size: 4.5rem;
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.2;
+  text-align: center;
+  color: #ffffff;
+  width:80%;
+  margin: 13rem auto 2rem auto;
+}
+
+.place-desc {
+  width: 70%;
+	font-family: 'MetaPro';
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.29;
+	text-align: center;
+	color: #ffffff;
+  margin:0 auto;
+}
+
+#win * h3 {
+  margin:7rem 0 10rem 0;
+}
+.italic{
+  font-style: italic;
+}
+
+.num-reasons {
+  margin: 0 auto;
+  width:13rem;
+}
+#reasons * h3 {
+    text-align: center;}
+
+#benefits {
+	list-style: none;
+	margin: 7rem 0;
+	padding: 0;
+}
+#benefits > li::before {
+	display: inline-block;
+	content: url('../images/sportkomitet/arrows_m.svg');
+	position: absolute;
+	left: -20px;
+	margin: -3px 0;
+}
+
+#benefits > li {
+	font-family: 'MetaPro';
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  text-align: left;
+  color: #0053b3;
+  margin:2.5rem 0;
+
+}
+
+.row.numbers {
+  margin:10rem 0 7rem 0;
+}
+
+#reason1 {
+  background: linear-gradient(to bottom, rgba(0, 139, 217, 0.0), rgba(6, 90, 232, 0.4) 77%, #0d2af7), url("../images/sportkomitet/reason1.webp") no-repeat top left;
+  background-size: cover;
+}
+
+.no-webp #reason1 {
+  background: linear-gradient(to bottom, rgba(0, 139, 217, 0.0), rgba(6, 90, 232, 0.4) 77%, #0d2af7), url("../images/sportkomitet/reason1.jpg") no-repeat top left;
+  background-size: cover;
+}
+
+.reasons-text{
+	font-family: 'MetaPro';
+	font-size: 2rem;
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.45;
+	color: #ffffff;
+  text-align: left;
+  padding-bottom: 8rem;
+}
+
+#reason1 * h2 {
+  padding-top: 48rem;
+  text-align: left;
+}
+
+#reason1 * h4 {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 300;
+  margin:2rem 0 4rem 0;
+}
+
+#reason2 * h2, #reason4 * h2 {
+  color:#0053b3;
+  margin-bottom: 7rem;
+}
+
+#reason3 {
+  background: linear-gradient(to right, rgba(237, 237, 237, 0.0), rgba(110, 110, 110, 0.01) 32%, rgba(0, 0, 0, 0.37)), url("../images/sportkomitet/reason3.webp") no-repeat top left;
+  background-size: cover;
+}
+
+.no-webp #reason3 {
+  background: linear-gradient(to right, rgba(237, 237, 237, 0.0), rgba(110, 110, 110, 0.01) 32%, rgba(0, 0, 0, 0.37)), url("../images/sportkomitet/reason3.jpg") no-repeat top left;
+  background-size: cover;
+}
+#reason3 * h2 {
+  padding-top: 27rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+#reason3 * h4 {
+	text-align: left;
+	padding-bottom:20rem;
+}
+
+#reason4 * .features {
+  color:#0053b3;
+  text-align: left;
+  width: 87%;
+}
+
+#reason5 {
+  background: url("../images/sportkomitet/reason5.webp") no-repeat top left;
+  background-size: cover;
+  margin-bottom: 10rem;
+}
+
+.no-webp #reason5 {
+  background: url("../images/sportkomitet/reason5.jpg") no-repeat top left;
+  background-size: cover;
+  margin-bottom: 10rem;
+
+}
+
+#reason5 * h2, #reason5 * .reasons-text{
+  padding-top: 4.5rem;
+	text-align: left;
+}
+#reason5 * .reasons-text {
+    padding-bottom: 63rem;
+}
+#reason5 * h4 {
+    text-align: left;
+		  font-size: 3rem;
+  font-weight: 300;
+	margin: 2rem 0 64rem;
+
+}
+/*#authors {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) 100%), url(../images/sportkomitet/authors.jpg) no-repeat top left;
+  background-size: cover;
+}*/
+
+#authors * h4 {
+  text-align: left;
+  padding: 30rem 0 0 0;
+  margin:0 0 2rem 0;
+}
+
+#authors * .reasons-text {
+  padding-bottom: 4rem;
+}
+
+#authors * img {
+    width: 15rem;
+    padding-bottom: 17rem;
+}
+
+#authors {
+  background: rgba(0, 83, 179, 0.55);
+  /*background-image: radial-gradient(circle at 51% 19%, rgba(13, 42, 247, 0.85), #0053b3);*/
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+#example {
+  margin:10rem 0;
+}
+
+#example * h4 {
+  text-align: left;
+  color:#0053b3;
+  margin: 0;
+
+}
+
+#cta {
+  margin-bottom: 10rem;
+}
+
+.videowrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videowrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+@media (min-width:992px) and (max-width:1200px) {
+
+
+h3 {
+  font-size: 3rem;
+}
+
+.features, .place-desc {
+  font-size: 1.8rem;
+}
+
+h5, #benefits > li {
+  font-size: 2.6rem;
+}
+
+#reason1, #reason3, #reason5
+{
+    background-position: 50% 50%;
+}
+#reason1 * h4 {
+    font-size: 2.6rem;
+	}
+#reason3 {
+	background-position: 0% 50%;
+}
+
+#reason4 * .features {
+  width: 100%;
+}
+
+#reason5 * h4 {
+  font-size: 2.6rem;
+	margin: 2rem 0 44rem;
+}
+
+#reason5 * .reasons-text {
+    padding: 0 0 63rem;
+}
+
+.boxee {
+  height: 36rem;
+}
+
+.place-name {
+font-size: 3.5rem;
+margin: 11rem auto 1rem auto;
+}
+
+#authors * h4 {
+  padding: 5rem 0 0 0;
+}
+}
+
+@media (max-width:991px){
+
+.video {
+	height:auto;
+}
+
+.skills_wrap {
+    font-size: 3rem;
+	}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 1.3rem;
+}
+
+.hero_caption {
+  padding-top: 47rem;
+}
+
+#empty {
+	height: 10px;
+}
+
+.b {
+    width: 252px;
+    font-size: 2rem;
+}
+.features {
+    width: 95%;
+}
+
+h3 {
+    font-size: 3rem;
+}
+h5, #benefits > li {
+    font-size: 2.4rem;
+}
+.place-name {
+    font-size: 2.7rem;
+		margin: 9rem auto 1rem auto;
+}
+
+.place-desc {
+    width: 90%;
+	}
+
+.boxee {
+    height: 30rem;
+}
+.reasons-text {
+    padding-bottom: 3rem;
+}
+
+#reason1 {
+	background-position: 50% 50%;
+}
+.webp #reason3 {
+  background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 32%, rgba(0, 0, 0, 0.37)), url(../images/sportkomitet/reason3.webp) no-repeat top left;
+  background-position: 20% 0%;
+}
+
+.no-webp #reason3 {
+  background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 32%, rgba(0, 0, 0, 0.37)), url(../images/sportkomitet/reason3.jpg) no-repeat top left;
+  background-position: 20% 0%;
+}
+
+#reason4 * .features {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+#reason5 * .reasons-text {
+    padding: 0 0 50rem;
+}
+
+.nomob {
+	display:none;
+}
+.mob {
+	display:block;
+}
+
+#authors {
+	background: rgba(0, 0, 0, 0.24);
+}
+
+#authors * h4 {
+    text-align: left;
+    padding: 13rem 0 0 0;
+    margin: 0 0 2rem 0;
+}
+
+#authors * img {
+    width: 10rem;
+    padding-bottom: 12rem;
+}
+
+#example * h4 {
+    margin: 0 0 5rem;
+}
+
+#reason5 * h2, #reason5 * .reasons-text {
+    text-align: center;
+	}
+
+	#reason5 * h4 {
+    text-align: center;
+	}
+}
+@media (max-width:480px){
+.nomob {
+	display:none;
+}
+.webp #hero {
+	background: linear-gradient(to bottom, rgba(0, 10, 81, 0.1) 50%, rgba(0, 10, 81, 0.8) 100%), url(../images/sportkomitet/main_mob.webp);
+	background-position: 50% 0%;
+	height: 100vh;
+	background-size: cover;
+}
+.no-webp #hero {
+	background: linear-gradient(to bottom, rgba(13, 42, 287, 0.4) 50%, rgba(0, 10, 81, 0) 80%), url(../images/sportkomitet/main_mob.jpg);
+  background-position: 50% 0%;
+	height: 100vh;
+	background-size: cover;
+	}
+
+.hero_caption {
+	padding-top: 24rem;
+	font-size: 3.6rem;
+}
+
+#intro {
+    padding: 7rem 0;
+	}
+
+	#skills {
+	    /* margin-top: 2rem; */
+	    margin-bottom: 4rem;
+	}
+
+	.skills_wrap {
+    padding: 0;
+}
+
+.divider {
+    margin: 0px auto 7rem;
+    width: 80%;
+}
+
+h1, .hero_caption {
+    font-size: 3.4rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-family: 'MetaPro';
+    font-size: 2.4rem;
+}
+
+.feature_img {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+h5 {
+    margin: 0 0 3rem 0;
+}
+
+.boxee {
+    margin-bottom: 2rem;
+}
+
+.no-margin-bottom {
+    margin-bottom: 2rem!important;
+}
+#places {
+    background: white;
+	}
+
+	#win * h3 {
+    margin: 3rem 0 7rem 0;
+}
+.row.numbers {
+    margin: 7rem 0 4rem 0;
+}
+
+h2 {
+    font-family: 'GothamPro';
+    font-size: 4rem;
+}
+
+#reason1 * h2 {
+    padding-top: 35rem;
+    text-align: left;
+}
+#reason1 * h4 {
+    font-size: 2rem;
+}
+
+.reasons-text {
+    font-size: 1.6rem;
+    line-height: 1.42;
+    padding-bottom: 1rem;
+}
+
+.webp #reason1 {
+  background: linear-gradient(to bottom, rgba(6, 90, 232, 0.4) 77%, #0d2af7), url(../images/sportkomitet/reason1.webp) no-repeat top left;
+  background-position: 46% 50%;
+}
+
+.no-webp #reason1 {
+  background: linear-gradient(to bottom, rgba(6, 90, 232, 0.4) 77%, #0d2af7), url(../images/sportkomitet/reason1.jpg) no-repeat top left;
+  background-position: 46% 50%;
+}
+
+	#reason2 * h2, #reason4 * h2 {
+    color: #0053b3;
+    margin-bottom: 4rem;
+}
+
+.num-reasons {
+    margin: 0 auto;
+    width: 9rem;
+}
+
+.webp #reason3 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(13, 42, 247, 1) 40%, rgba(13, 42, 247, 1) 100%), url(../images/sportkomitet/reason3.webp);
+    background-position: 21% 0%;
+    /* background-origin: padding-box; */
+    background-size: 180%;
+}
+
+.no-webp #reason3 {
+    background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 24%, rgba(13, 42, 247, 1) 27%), url(../images/sportkomitet/reason3.jpg);
+    background-position: 21% 0%;
+    /* background-origin: padding-box; */
+    background-size: 180%;
+}
+
+h4 {
+    margin: 2rem 0;
+}
+#reason5 * .reasons-text {
+    padding: 0 0 24rem;
+}
+
+#reason5 * h2 {
+	font-size: 2.6rem;
+}
+
+
+#reason5 * h4 {
+    font-size: 2.4rem;
+		margin: 2rem 0 40rem;
+}
+
+#reason5 {
+    margin-bottom: 7rem;
+    background-position: 28% 0%;
+}
+.features {
+    font-size: 2rem;
+	}
+
+#price * h5 {
+	margin:4rem 0 7rem 0;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+}
+#authors {
+	background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 34%, rgba(13, 42, 247, 1) 34%);
+}
+
+#authors * h4 {
+    font-size: 2.4rem;
+		padding: 26rem 0 0 0;
+		text-align: center;
+}
+#authors * .reasons-text {
+	text-align: center;
+
+}
+
+#authors * img {
+    width: 10rem;
+    padding-bottom: 4rem;
+}
+
+#example {
+  margin: 7rem -15px 7rem -15px;
+}
+#example * h4 {
+	text-align: center;
+}
+#cta * h3 {
+    font-size: 2.4rem;
+}
+.navbar-toggle {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ff443a;
+	}
+
+	.navbar-default .navbar-toggle {
+    border-color: #ff443a!important;
+}
+.nav > li {
+    text-align: right;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background: rgba(0, 0, 0, 0.6);;
+		border-top: 0;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+.navbar-default {
+    border-bottom:0;
+		background: transparent;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+	}
+
+
+#benefits > li::before {
+    display: inline-block;
+    content: url(../images/sportkomitet/arrows_m.svg);
+    position: absolute;
+    left: -12px;
+    margin: -2px 0;
+}
+
+.navbar-brand {
+    height: 60px;
+	}
+
+	.navbar-toggle {
+    margin-top: 13px;
+	}
+
+	h5, #benefits > li {
+    font-size: 2rem;
+}
+
+#reason3 * h4 {
+    text-align: left;
+    padding-bottom: 4rem;
+}
+}
