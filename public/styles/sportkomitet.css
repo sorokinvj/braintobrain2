@@ -522,6 +522,10 @@ h5 {
     margin-bottom: 10rem;
 }
 
+#writetous {
+	margin-top: 10rem;
+}
+
 
 @media (min-width:992px) and (max-width:1200px) {
 
