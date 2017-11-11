@@ -3,13 +3,19 @@ extends ../layouts/default
 block css
 	link(href="/styles/typograf.css", rel="stylesheet") 
 	
-//- block head
-//- 	meta(property="og:type",content="website")
-//- 	meta(property="og:url", content=("http://braintobrain.ru/blog/post/" + post.slug))
-//- 	meta(property="og:title", content=data.post.title)
-//- 	meta(property="og:description", content=data.post.content.brief)
-//- 	meta(property="og:image", content=data.post._.image.fill(640,480,f_auto,center))
-
+block head
+	- var mimg = data.post._.image.fill(500,f_auto,center);		
+	- var murl = 'http://braintobrain.ru/blog/post/' + data.post.slug;		
+	- var mtitle = data.post.title;		
+	- var mdesc = data.post.content.brief;		
+	title
+		!=mtitle
+	meta(property="og:type",content="website")
+	meta(property="og:url", content=murl)
+	meta(property="og:title", content=mtitle)
+	meta(property="og:description", content=mdesc)
+	meta(property="og:image", content=mimg)
+	
 block header	
 	div(role="navigation").navbar.navbar-default
 		.container: .row: .col-xs-12.col-sm-11.col-sm-offset-1.col-md-10.col-md-offset-1
@@ -60,6 +66,23 @@ block content
 							//- 	|  
 							//- if data.post.author
 							//- 	| by #{data.post.author.name.first}
+				.debug 		
+					//- - var mimg = data.post._.image.fill(414,736,f_auto,center);		
+					//- - var murl = 'http://braintobrain.ru/blog/post/' + data.post.slug;		
+					//- - var mtitle = data.post.title;		
+					//- - var mdesc = data.post.content.brief;		
+					|Картинка
+					!=mimg
+					br
+					|URL
+					=murl
+					br
+					|Заголовок
+					!=mtitle
+					br
+					|Лид
+					!=mdesc
+				
 				.post
 					!= data.post.content.full
 				.tags_wrap
