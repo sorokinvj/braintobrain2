@@ -1,5 +1,13 @@
 extends ../layouts/default
 
+
+block head
+	meta(property="og:type",content="website")
+	meta(property="og:url", content="http://braintobrain.ru/blog")
+	meta(property="og:title", content="Блог о коллективном интеллекте")
+	meta(property="og:description", content="Статьи о том, как пробуждать мышление в группах и решать задачи, которые не под силу одному человеку")
+	meta(property="og:image", content="http://braintobrain.ru/images/birds2.png")
+
 block header	
 	div(role="navigation").navbar.navbar-default
 		.container: .row: .col-xs-12.col-sm-11.col-sm-offset-1.col-md-10.col-md-offset-1
