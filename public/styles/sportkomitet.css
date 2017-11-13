@@ -100,6 +100,7 @@ a {
 
 .navbar-brand > .logo_footer {
 	width: 180px;
+  margin: 5px 0 0 0;
 }
 
 
@@ -496,7 +497,6 @@ h5 {
   text-align: left;
   color:#0053b3;
   margin: 0;
-
 }
 
 #cta {
@@ -526,6 +526,11 @@ h5 {
 	margin-top: 10rem;
 }
 
+.skills_text {
+	margin: 0.5rem 0 0 0;
+	display: inline;
+	position: absolute;
+}
 
 @media (min-width:992px) and (max-width:1200px) {
 
@@ -678,6 +683,7 @@ h5, #benefits > li {
 
 #example * h4 {
     margin: 0 0 5rem;
+    text-align: center;
 }
 
 #reason5 * h2, #reason5 * .reasons-text {
@@ -687,8 +693,14 @@ h5, #benefits > li {
 	#reason5 * h4 {
     text-align: center;
 	}
+
 }
 @media (max-width:480px){
+
+	.container>.navbar-header{
+	    margin:0;
+	}
+
 .nomob {
 	display:none;
 }
@@ -898,6 +910,7 @@ h4 {
 
 	.navbar-default .navbar-toggle {
     border-color: #ff443a!important;
+		z-index: 9999;
 }
 .nav > li {
     text-align: right;
@@ -928,10 +941,6 @@ h4 {
     left: -12px;
     margin: -2px 0;
 }
-
-.navbar-brand {
-    height: 60px;
-	}
 
 	.navbar-toggle {
     margin-top: 13px;
