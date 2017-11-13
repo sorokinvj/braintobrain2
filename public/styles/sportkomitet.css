@@ -701,21 +701,19 @@ h5, #benefits > li {
 	    margin:0;
 	}
 
+	.skills_text {
+    font-size: 1.8rem;
+}
+
 .nomob {
 	display:none;
 }
-.webp #hero {
-	background: linear-gradient(to bottom, rgba(0, 10, 81, 0.1) 50%, rgba(0, 10, 81, 0.8) 100%), url(../images/sportkomitet/main_mob.webp);
+#hero {
+	background: linear-gradient(to bottom, rgba(0, 10, 81, 0.1) 50%, rgba(0, 10, 81, 0.8) 100%), url('../images/sportkomitet/olympics-mob.jpg');
 	background-position: 50% 0%;
 	height: 100vh;
 	background-size: cover;
 }
-.no-webp #hero {
-	background: linear-gradient(to bottom, rgba(13, 42, 287, 0.4) 50%, rgba(0, 10, 81, 0) 80%), url(../images/sportkomitet/main_mob.jpg);
-  background-position: 50% 0%;
-	height: 100vh;
-	background-size: cover;
-	}
 
 .hero_caption {
 	padding-top: 24rem;
