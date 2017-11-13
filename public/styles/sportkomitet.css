@@ -64,96 +64,207 @@ html, body {
     overflow-x: hidden;
 }
 
+.navbar-brand > .logo_footer {
+	width: 180px;
+	margin: 5px 0 0 0;
+}
 
-	.container>.navbar-header{
-	    margin:0;
-	}
-
-	.skills_text {
-    font-size: 1.8rem;
+.container>.navbar-header{
+    margin:0;
 }
 
 .nomob {
 	display:none;
 }
 #hero {
-	background: url('../images/sportkomitet/olympics-mob.jpg');
+  background: linear-gradient(to bottom, rgba(132, 132, 132, 0) 57%, rgba(0, 58, 124, 0.88)), url('../images/sportkomitet/olympics-mob.jpg');
 	background-position: 50% 0%;
 	height: 100vh;
 	background-size: cover;
 }
 
+h1, .hero_caption {
+	font-family: 'Romanovsky';
+	font-size: 4rem;
+	margin:0;
+	text-align: center;
+
+}
 .hero_caption {
-	padding-top: 24rem;
+	padding-top: 32rem;
+	color: white;
 	font-size: 3.6rem;
 }
 
+#hero h3 {
+	color: white;
+	font-size: 1.8rem;
+}
+
+h1 {
+	color:#0053b3;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+
+h2 {
+	font-family: 'GothamPro';
+	font-size: 2.6rem;
+	font-weight: 900;
+	font-style: italic;
+	font-stretch: normal;
+	color: #0053b3;
+  margin:0;
+}
+
+h3 {
+	font-family: 'GothamPro';
+	font-size: 2rem;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.4;
+	text-align: center;
+	color: #0053b3;
+}
+
+
+
+h4 {
+	font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+	text-align: center;
+	color: #0053b3;
+  margin: 2rem 0 5rem;
+}
+
+/*h5 {
+  font-family: 'MetaPro';
+  font-size: 3.2rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  text-align: center;
+  color: #0053b3;
+  margin:7rem 0;
+}*/
+
+#example {
+    margin-top: 2rem;
+		text-align: center;
+		padding-top: 7rem;
+}
+
+.videowrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin: 4rem 0;
+}
+.videowrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 #intro {
-    padding: 7rem 0;
-	}
+    padding: 0 0 4rem 0;
+}
 
-	#skills {
-	    /* margin-top: 2rem; */
-	    margin-bottom: 4rem;
-	}
+#skills {
+  margin-bottom: 4rem;
+}
 
-	.skills_wrap {
-    padding: 0;
+.skills_wrap {
+  padding: 0;
+}
+
+.skills_wrap {
+    text-align: left;
+    color: #0053b3;
+    text-align: left;
+    height: 8rem;
+}
+.skill_img {
+    width: 40px;
+    height: 40px;
+    margin-right: 2rem;
+}
+
+.skills_text {
+  font-size: 1.6rem;
+  display: inline;
 }
 
 .divider {
-    margin: 0px auto 7rem;
-    width: 80%;
+    width: 90%;
 }
 
-h1, .hero_caption {
-    font-size: 3.4rem;
-    line-height: 1.3;
+#reasons {
+	text-align: center;
 }
 
-h4 {
-    font-family: 'MetaPro';
-    font-size: 2.4rem;
+#reasons .divider  {
+    margin-bottom: 7rem;
 }
 
-.feature_img {
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+#reasons h2 {
+    margin: 4rem 0;
 }
 
-h5 {
-    margin: 0 0 3rem 0;
+#benefits {
+	list-style: none;
+	margin: 2rem 0;
+	padding: 0;
+}
+#benefits > li::before {
+	display: inline-block;
+	content: url('../images/sportkomitet/arrows_m.svg');
+	position: absolute;
+	left: -20px;
+	margin: -3px 0;
 }
 
-.boxee {
-    margin-bottom: 2rem;
+#benefits > li {
+	font-family: 'GothamPro';
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.44;
+  text-align: left;
+  color: #0053b3;
+  margin: 2rem 0;
 }
 
-.no-margin-bottom {
-    margin-bottom: 2rem!important;
+#benefits > li::before {
+    display: inline-block;
+    content: url('../images/sportkomitet/arrows_m.svg');
+    position: absolute;
+    left: -12px;
+    margin: -2px 0;
 }
-#places {
-    background: white;
-	}
 
-	#win * h3 {
-    margin: 3rem 0 7rem 0;
-}
 .row.numbers {
     margin: 7rem 0 4rem 0;
+    text-align: center;
 }
 
-h2 {
-    font-family: 'GothamPro';
-    font-size: 4rem;
+#reason1 h4 {
+ color: white;
 }
 
-#reason1 * h2 {
-    padding-top: 35rem;
-    text-align: left;
-}
-#reason1 * h4 {
-    font-size: 2rem;
+#reason1 h2 {
+    padding-top: 40rem;
+		text-align: center;
+		color: white;
 }
 
 .reasons-text {
@@ -163,18 +274,23 @@ h2 {
 }
 
 .webp #reason1 {
-  background: linear-gradient(to bottom, rgba(6, 90, 232, 0.4) 77%, #0d2af7), url('../images/sportkomitet/reason1.webp') no-repeat top left;
+background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 0.75)), url('../images/sportkomitet/reason1.webp') no-repeat top left;
   background-position: 46% 50%;
 }
 
 .no-webp #reason1 {
-  background: linear-gradient(to bottom, rgba(6, 90, 232, 0.4) 77%, #0d2af7), url('../images/sportkomitet/reason1.jpg') no-repeat top left;
+  background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 0.75)), url('../images/sportkomitet/reason1.jpg') no-repeat top left;
   background-position: 46% 50%;
 }
 
-	#reason2 * h2, #reason4 * h2 {
-    color: #0053b3;
-    margin-bottom: 4rem;
+#reason2{
+	text-align: center;
+}
+
+#reason2 * h2, #reason4 * h2 {
+  color: #0053b3;
+  margin-bottom: 4rem;
+
 }
 
 .num-reasons {
@@ -182,48 +298,103 @@ h2 {
     width: 9rem;
 }
 
-.webp #reason3 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(13, 42, 247, 1) 40%, rgba(13, 42, 247, 1) 100%), url('../images/sportkomitet/reason3.webp');
-    background-position: 21% 0%;
+.features {
+    font-size: 1.6rem;
+		line-height: 1.5;
+    text-align: center;
+    color: #0053b3;
+}
+
+.feature_img {
+		margin: 4rem 0;
+		height: 10rem;
+		width: 20rem;
+}
+
+#reason3 {
+    background: url('../images/sportkomitet/reason3_mob.jpg');
+		background-size: cover;
+		height:100%;
     /* background-origin: padding-box; */
-    background-size: 180%;
 }
 
-.no-webp #reason3 {
-    background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 24%, rgba(13, 42, 247, 1) 27%), url('../images/sportkomitet/reason3.jpg');
-    background-position: 21% 0%;
-    /* background-origin: padding-box; */
-    background-size: 180%;
+#reason3 h2 {
+    padding-top: 40rem;
+		color: white;
+		text-align: center;
 }
 
-h4 {
-    margin: 2rem 0;
-}
-#reason5 * .reasons-text {
-    padding: 0 0 24rem;
+#reason3 h4 {
+    color: white;
 }
 
-#reason5 * h2 {
-	font-size: 2.6rem;
+#reason4 {
+	text-align: center;
 }
 
+#reason4 img:not(.num-reasons) {
+	width: 100%;
+}
 
-#reason5 * h4 {
-    font-size: 2.4rem;
-		margin: 2rem 0 40rem;
+#reason4 h5 {
+  margin: 4rem 0;
+}
+
+#reason5{
+	text-align: center;
 }
 
 #reason5 {
-    margin-bottom: 7rem;
-    background-position: 28% 0%;
+	background: url("../images/sportkomitet/reason5.webp") no-repeat top left;
+	background-size: cover;
+  background-position-x: 41%;
 }
-.features {
-    font-size: 2rem;
-	}
 
-#price * h5 {
-	margin:4rem 0 7rem 0;
+.no-webp #reason5 {
+	background: url("../images/sportkomitet/reason5.jpg") no-repeat top left;
+	background-size: cover;
+	background-position-x: 41%;
 }
+
+#reason5  h4 {
+    color: white;
+    margin: 3rem 0 39rem;
+}
+
+#reason5  h2 {
+    margin: 3rem 0;
+		color: white;
+}
+
+#rules {
+    margin: 7rem 0 0 0;
+    text-align: center;
+}
+
+/*#places {
+	background: url('../images/sportkomitet/players.svg') no-repeat;
+	background-size: 80% 80%;
+	background-position: 40% 23%;
+}*/
+
+#win h2 {
+	text-align: center;
+}
+
+#photos {
+	margin: 4rem 0;
+}
+
+#price {
+	text-align:center;
+	margin: 7rem 0;
+}
+
+#price .divider  {
+    margin-bottom: 7rem;
+}
+
+
 
 .carousel-indicators {
 	display: none;
@@ -238,101 +409,81 @@ h4 {
     height: auto;
 }
 #authors {
-	background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 34%, rgba(13, 42, 247, 1) 34%);
+	 text-align: center;
+	     background: #dddddd;
 }
 
-#authors * h4 {
-    font-size: 2.4rem;
-		padding: 26rem 0 0 0;
+#authors h3 {
+		padding: 4rem 0 0 0;
 		text-align: center;
 }
-#authors * .reasons-text {
+#authors .reasons-text {
 	text-align: center;
-
+	color:#0053b3;
 }
 
 #authors * img {
     width: 10rem;
-    padding-bottom: 4rem;
+    padding: 0 0 4rem 0;
 }
 
-#example {
-  margin: 7rem -15px 7rem -15px;
-}
-#example * h4 {
+#writetous {
 	text-align: center;
+	padding-bottom: 7rem;
 }
-#cta * h3 {
-    font-size: 2.4rem;
+
+#writetous .divider {
+	margin: 7rem 0 4rem;
 }
-.navbar-toggle {
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 5px;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #ff443a;
+
+.navbar-collapse {
+    width: 110%;
+    padding: 1rem 5rem 2rem 0;
 	}
 
-	.navbar-default .navbar-toggle {
-    border-color: #ff443a!important;
-		z-index: 9999;
-}
-.nav > li {
-    text-align: right;
-}
-
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-		background: rgba(0, 0, 0, 0.6);;
-		border-top: 0;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: transparent;
-}
-
-.navbar-default {
-    border-bottom:0;
-		background: transparent;
-}
-.navbar-default .navbar-nav > li > a {
-    color: white;
+.navbar-default .navbar-nav>li>a {
+  color: #0053b3;
 	}
 
 
-#benefits > li::before {
-    display: inline-block;
-    content: url('../images/sportkomitet/arrows_m.svg');
-    position: absolute;
-    left: -12px;
-    margin: -2px 0;
-}
-
-	.navbar-toggle {
-    margin-top: 13px;
+@media (min-width:375px) and (max-width:414px){
+	.hero_caption {
+		font-size: 4rem;
+		padding-top: 40rem;
 	}
-
-	h5, #benefits > li {
-    font-size: 2rem;
+	.skills_text {
+		font-size: 2rem;
+		display: inline;
+	}
 }
 
-#reason3 * h4 {
-    text-align: left;
-    padding-bottom: 4rem;
+@media (min-width:413px) and (max-width:480px){
+	.hero_caption {
+		padding-top: 46rem;
+    font-size: 4.4rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
 }
 
-@media (max-width:991px){
+@media (min-width:767px) and (max-width:991px){
 
 .video {
 	height:auto;
 }
 
-.skills_wrap {
-    font-size: 3rem;
-	}
+.navbar-collapse {
+    width: 95%;
+    padding: 2px 0 0 0;
+}
+.navbar-default .navbar-nav>li>a {
 
-.navbar-default .navbar-nav > li > a {
-    font-size: 1.3rem;
+    letter-spacing: 0;
+    font-weight: 700;
+    padding-top: 2.6rem;
+    margin: 0 1rem;
+    font-size: 1.4rem;
 }
 
 .hero_caption {
@@ -472,10 +623,6 @@ h5, #benefits > li {
 	    padding-bottom: 25px;
 	}
 
-	.navbar-brand > .logo_footer {
-		width: 180px;
-	  margin: 5px 0 0 0;
-	}
 
 
 	#hero > h4 {
@@ -483,28 +630,11 @@ h5, #benefits > li {
 		margin: 3rem auto 4rem;
 	}
 
-	h1, .hero_caption {
-	  font-family: 'Romanovsky';
-	  font-size: 6rem;
-	  margin:0;
-	  text-align: center;
-
-	}
 
 	.hero_caption {
-	  padding-top: 57rem;
-	  color:white;
-	  font-size: 8rem;
-
+		padding-top: 57rem;
+		font-size: 8rem;
 	}
-
-	h1 {
-	  color:#0053b3;
-	  text-transform: uppercase;
-	  font-style: italic;
-	  margin-bottom: 8rem;
-	}
-
 
 	.webp #hero  {
 	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/main.webp');
@@ -518,51 +648,6 @@ h5, #benefits > li {
 	  background-position: 50% 50%;
 
 
-	}
-
-	h2 {
-		font-family: 'GothamPro';
-		font-size: 6rem;
-		font-weight: 900;
-		font-style: italic;
-		font-stretch: normal;
-		color: #ffffff;
-	  margin:0;
-	}
-
-	h3 {
-		font-family: 'GothamPro';
-		font-size: 4rem;
-		font-weight: normal;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 1.4;
-		text-align: center;
-		color: #0053b3;
-	}
-
-	h4 {
-		font-family: 'MetaPro';
-		font-size: 2.2rem;
-	  font-weight: 400;
-	  font-style: normal;
-	  font-stretch: normal;
-	  line-height: 1.5;
-		text-align: center;
-		color: white;
-	  margin: 2rem 0 5rem;
-	}
-
-	h5 {
-	  font-family: 'MetaPro';
-	  font-size: 3.2rem;
-	  font-weight: 300;
-	  font-style: normal;
-	  font-stretch: normal;
-	  line-height: 1.44;
-	  text-align: center;
-	  color: #0053b3;
-	  margin:7rem 0;
 	}
 
 	.b {
@@ -588,25 +673,6 @@ h5, #benefits > li {
 		margin-bottom: 10rem;
 	}
 
-	.skills_wrap {
-		font-family: 'MetaPro';
-		font-size: 2rem;
-		font-weight: 300;
-		line-height: 1.44;
-		text-align: left;
-		color: #0053b3;
-		/*margin:2.5rem;*/
-		padding: 2.5rem;
-		text-align: left;
-	  height: 10rem;
-
-		/*border: 1px dashed #0053b3;*/
-	}
-
-	.skill_img {
-		width:40px;
-		margin-right: 1rem;
-	}
 
 	#empty{
 	  height:60px;
@@ -618,7 +684,6 @@ h5, #benefits > li {
 
 	.divider {
 	  margin:0 auto 10rem;
-
 	}
 
 	.row {
@@ -645,17 +710,9 @@ h5, #benefits > li {
 	  flex-wrap: wrap;
 	}
 
-	.feature_img {
-	    margin-top: 4rem;
-	    height: 10rem;
-	    width: 20rem;
-	}
 
-	#places {
-	  background: url('../images/sportkomitet/players.svg') no-repeat;
-	  background-size: 80% 80%;
-	  background-position: 40% 23%;
-	}
+
+
 
 	.boxee {
 	  height: 46rem;
@@ -706,31 +763,7 @@ h5, #benefits > li {
 	#reasons * h3 {
 	    text-align: center;}
 
-	#benefits {
-		list-style: none;
-		margin: 7rem 0;
-		padding: 0;
-	}
-	#benefits > li::before {
-		display: inline-block;
-		content: url('../images/sportkomitet/arrows_m.svg');
-		position: absolute;
-		left: -20px;
-		margin: -3px 0;
-	}
 
-	#benefits > li {
-		font-family: 'MetaPro';
-	  font-size: 3.2rem;
-	  font-weight: 300;
-	  font-style: normal;
-	  font-stretch: normal;
-	  line-height: 1.44;
-	  text-align: left;
-	  color: #0053b3;
-	  margin:2.5rem 0;
-
-	}
 
 	.row.numbers {
 	  margin:10rem 0 7rem 0;
@@ -800,33 +833,7 @@ h5, #benefits > li {
 	  width: 87%;
 	}
 
-	#reason5 {
-	  background: url("../images/sportkomitet/reason5.webp") no-repeat top left;
-	  background-size: cover;
-	  margin-bottom: 10rem;
-	}
 
-	.no-webp #reason5 {
-	  background: url("../images/sportkomitet/reason5.jpg") no-repeat top left;
-	  background-size: cover;
-	  margin-bottom: 10rem;
-
-	}
-
-	#reason5 * h2, #reason5 * .reasons-text{
-	  padding-top: 4.5rem;
-		text-align: left;
-	}
-	#reason5 * .reasons-text {
-	    padding-bottom: 63rem;
-	}
-	#reason5 * h4 {
-	    text-align: left;
-			  font-size: 3rem;
-	  font-weight: 300;
-		margin: 2rem 0 64rem;
-
-	}
 	/*#authors {
 	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) 100%), url(../images/sportkomitet/authors.jpg) no-repeat top left;
 	  background-size: cover;
@@ -877,19 +884,7 @@ h5, #benefits > li {
 	  margin-bottom: 10rem;
 	}
 
-	.videowrapper {
-		position: relative;
-		padding-bottom: 56.25%; /* 16:9 */
-		padding-top: 25px;
-		height: 0;
-	}
-	.videowrapper iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+
 
 	.carousel {
 	    position: relative;
