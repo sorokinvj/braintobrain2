@@ -64,6 +64,13 @@ html, body {
     overflow-x: hidden;
 }
 
+a, a:hover {
+	text-decoration: none;
+}
+a {
+	color:#ff443a;
+}
+
 .navbar-brand > .logo_footer {
 	width: 180px;
 	margin: 5px 0 0 0;
@@ -241,15 +248,15 @@ h4 {
   line-height: 1.44;
   text-align: left;
   color: #0053b3;
-  margin: 2rem 0;
-}
+  margin: 2rem 0 0 2rem;
+	}
 
 #benefits > li::before {
     display: inline-block;
-    content: url('../images/sportkomitet/arrows_m.svg');
+    content: url(../images/sportkomitet/arrows_m.svg);
     position: absolute;
-    left: -12px;
-    margin: -2px 0;
+    left: 0;
+    margin: 0;
 }
 
 .row.numbers {
@@ -289,8 +296,7 @@ background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 
 
 #reason2 * h2, #reason4 * h2 {
   color: #0053b3;
-  margin-bottom: 4rem;
-
+    margin: 7rem 0 0 0;
 }
 
 .num-reasons {
@@ -348,6 +354,7 @@ background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 
 	background: url("../images/sportkomitet/reason5.webp") no-repeat top left;
 	background-size: cover;
   background-position-x: 41%;
+  margin-top: 7rem;
 }
 
 .no-webp #reason5 {
@@ -387,14 +394,12 @@ background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 
 
 #price {
 	text-align:center;
-	margin: 7rem 0;
+	margin: 7rem auto;
 }
 
 #price .divider  {
     margin-bottom: 7rem;
 }
-
-
 
 .carousel-indicators {
 	display: none;
@@ -467,7 +472,7 @@ background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 
 	}
 }
 
-@media (min-width:767px) and (max-width:991px){
+@media (min-width:767px) {
 
 .video {
 	height:auto;
@@ -487,10 +492,28 @@ background: linear-gradient(to bottom, rgba(6, 90, 232, 0) 77%, rgba(0, 11, 88, 
 }
 
 .hero_caption {
-  padding-top: 47rem;
+  padding-top: 79rem;
+  font-size: 6.6rem;
 }
 
-#empty {
+#hero h3 {
+  font-size: 2.5rem;
+}
+
+#hero {
+    background: linear-gradient(to bottom, rgba(132, 132, 132, 0) 72%, rgba(0, 58, 124, 0.88)), url('../images/sportkomitet/olympics-mob.jpg');
+    background-position: 50% 20%;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+/*#empty {
 	height: 10px;
 }
 
@@ -522,10 +545,54 @@ h5, #benefits > li {
 }
 .reasons-text {
     padding-bottom: 3rem;
+}*/
+
+#benefits {
+    margin: 2rem 0 7rem;
 }
 
-#reason1 {
-	background-position: 50% 50%;
+.webp #reason1 {
+	background-position: 50% 20%;
+}
+
+
+#benefits > li {
+    font-size: 2.5rem;
+	}
+
+	h4 {
+    font-size: 2rem;
+	}
+
+.features_wrap {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: space-around;
+    height: 28rem;
+}
+
+.feature_img {
+     margin: 0;
+    height: 30%;
+    width: 100%;
+}
+
+.divider {
+    width: 50%;
+}
+
+#rules .divider {
+	margin-bottom: 4rem;
+}
+
+#intro {
+    padding: 0 0 7rem 0;
+}
+
+#reason2 {
+    margin-bottom: 10rem;
 }
 .webp #reason3 {
   background: linear-gradient(to bottom, rgba(110, 110, 110, 0.01) 32%, rgba(0, 0, 0, 0.37)), url('../images/sportkomitet/reason3.webp') no-repeat top left;
@@ -546,6 +613,10 @@ h5, #benefits > li {
     padding: 0 0 50rem;
 }
 
+#goal h3 {
+	margin: 10rem 0;
+}
+
 .nomob {
 	display:none;
 }
@@ -558,16 +629,13 @@ h5, #benefits > li {
 }
 
 #authors * h4 {
-    text-align: left;
-    padding: 13rem 0 0 0;
-    margin: 0 0 2rem 0;
+    text-align: center;
+    padding: 5rem 0 0 0;
 }
-
 #authors * img {
     width: 10rem;
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
 }
-
 #example * h4 {
     margin: 0 0 5rem;
     text-align: center;
@@ -577,96 +645,99 @@ h5, #benefits > li {
     text-align: center;
 	}
 
-	#reason5 * h4 {
+#reason5 * h4 {
+  text-align: center;
+}
+
+#writetous {
     text-align: center;
+    padding-bottom: 10rem;
+}
+}
+
+@media (min-width:992px) {
+
+/*.col-lg-4, .col-md-5, .col-lg-10, .col-md-10 {
+	margin-left: 0;
+}*/
+
+#example {
+		margin: 10rem 0 0 0;
+		padding: 0;
+		text-align: left;
+
+	}
+	#example h3 {
+	    text-align: left;
+	    font-size: 2rem;
 	}
 
+	h3 {
+	    font-size: 3rem;
+		}
+
+.videowrapper {
+	margin: 0;
+}
+
+
+
+	.mob {
+		display:none;
+	}
+
+	.navbar-collapse {
+	    width: 100%;
+	    padding: 0;
+	}
+
+	.divider {
+	    width: 50%;
+	}
+
+	#hero h3 {
+	    font-size: 2rem;
+	}
+
+	h1 {
+    font-size: 5rem;
+}
+	.hero_caption {
+	    padding-top: 51rem;
+	    font-size: 8rem;
+	}
+
+	.webp #hero  {
+	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/olympics.webp');
+	  background-size: cover;
+	  background-position: 50% 50%;
+	  /*height:100vh;*/
+	}
+	.no-webp #hero  {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/olympics.jpg');
+	  background-size: cover;
+	  background-position: 50% 50%;
+	}
+
+	#benefits {
+    list-style: none;
+    margin: 0 0 7rem 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+#reason1 * h4 {
+
+    margin: 2rem 0 10rem 0;
 }
 
 
 
 
 
-@media (min-width:992px) and (max-width:1200px) {
-
-	a, a:hover {
-	  text-decoration: none;
-	}
-	a {
-	  color:#ff443a;
-	}
-
-	.h1, .h2, .h3, h1, h2, h3 {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	.mob {
-		display:none;
-	}
-	.navbar-default {
-		background: white;
-		border-bottom: #ff443a 4px solid;
-	}
-
-	.navbar-default .navbar-nav > li > a {
-	    color: black;
-	    text-transform: uppercase;
-			letter-spacing: 0.5px;
-			font-family: 'GothamPro';
-			font-size: 1.6rem;
-			font-weight: 900;
-	}
-
-	.navbar-nav > li > a {
-	    padding-top: 25px;
-	    padding-bottom: 25px;
-	}
-
-
-
-	#hero > h4 {
-		width:100%;
-		margin: 3rem auto 4rem;
-	}
-
-
-	.hero_caption {
-		padding-top: 57rem;
-		font-size: 8rem;
-	}
-
-	.webp #hero  {
-	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/main.webp');
-	  background-size: cover;
-	  background-position: 50% 50%;
-	  /*height:100vh;*/
-	}
-	.no-webp #hero  {
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 59%, rgba(0, 10, 81, 0.6) 100%), url('../images/sportkomitet/main.jpg');
-	  background-size: cover;
-	  background-position: 50% 50%;
-
-
-	}
-
-	.b {
-	  width: 292px;
-	  height: 74px;
-	  background-color: rgba(254, 254, 254, 0.3);
-	  border: solid 3px #ffffff;
-	  margin: 0 auto;
-	  font-family: 'GothamPro';
-		font-size: 2.6rem;
-		font-weight: 900;
-		font-style: normal;
-		font-stretch: normal;
-		color: #ffffff;
-	  text-transform: uppercase;
-	  text-align: center;
-	  padding: 1.7rem;
-	  margin-bottom: 3rem;
-	}
 
 	#skills {
 		/*margin-top: 2rem;*/
@@ -793,20 +864,23 @@ h5, #benefits > li {
 
 	#reason1 * h2 {
 	  padding-top: 48rem;
-	  text-align: left;
 	}
 
 	#reason1 * h4 {
-	  text-align: left;
-	  font-size: 3rem;
 	  font-weight: 300;
-	  margin:2rem 0 4rem 0;
+	  margin:2rem 0 14rem 0;
 	}
 
-	#reason2 * h2, #reason4 * h2 {
+	#reason2 * h2 {
 	  color:#0053b3;
-	  margin-bottom: 7rem;
+		margin-bottom: 7rem;
 	}
+
+#reason4 * h2 {
+	  color:#0053b3;
+		margin-bottom: 4rem;
+	}
+
 
 	#reason3 {
 	  background: linear-gradient(to right, rgba(237, 237, 237, 0.0), rgba(110, 110, 110, 0.01) 32%, rgba(0, 0, 0, 0.37)), url("../images/sportkomitet/reason3.webp") no-repeat top left;
@@ -839,6 +913,10 @@ h5, #benefits > li {
 	  background-size: cover;
 	}*/
 
+	#rules h1 {
+	    margin-bottom: 7rem;
+	}
+
 	#authors * h4 {
 	  text-align: left;
 	  padding: 30rem 0 0 0;
@@ -870,41 +948,22 @@ h5, #benefits > li {
 	  z-index: -100;
 	}
 
-	#example {
-	    margin: 10rem 0 0 0;
-		}
 
-	#example * h4 {
-	  text-align: left;
-	  color:#0053b3;
-	  margin: 0;
-	}
-
-	#cta {
-	  margin-bottom: 10rem;
-	}
-
-
-
-	.carousel {
-	    position: relative;
-	    margin-bottom: 10rem;
-	}
-
-	#writetous {
-		margin-top: 10rem;
-	}
-
-	.skills_text {
-		margin: 0.5rem 0 0 0;
-		display: inline;
-		position: absolute;
-	}
-
-
-h3 {
-  font-size: 3rem;
+.carousel {
+    position: relative;
+    margin-bottom: 10rem;
 }
+
+#writetous {
+	margin-top: 10rem;
+}
+
+.skills_text {
+	margin: 0.5rem 0 0 0;
+	display: inline;
+	position: absolute;
+}
+
 
 .features, .place-desc {
   font-size: 1.8rem;
@@ -918,9 +977,7 @@ h5, #benefits > li {
 {
     background-position: 50% 50%;
 }
-#reason1 * h4 {
-    font-size: 2.6rem;
-	}
+
 #reason3 {
 	background-position: 0% 50%;
 }
@@ -929,8 +986,11 @@ h5, #benefits > li {
   width: 100%;
 }
 
+#reason5 h2 {
+margin: 7rem 0 3rem;
+	}
+
 #reason5 * h4 {
-  font-size: 2.6rem;
 	margin: 2rem 0 44rem;
 }
 
@@ -938,16 +998,25 @@ h5, #benefits > li {
     padding: 0 0 63rem;
 }
 
-.boxee {
-  height: 36rem;
+#price {
+    text-align: center;
+    margin: 7rem auto 10rem;
 }
 
-.place-name {
-font-size: 3.5rem;
-margin: 11rem auto 1rem auto;
+#writetous {
+margin:0 auto;
+}
+
+#writetous .divider {
+    margin: 10rem 0 7rem;
 }
 
 #authors * h4 {
-  padding: 5rem 0 0 0;
+    padding: 0;
 }
+
+#authors {
+	padding: 7rem 0 0 0;
+}
+
 }
