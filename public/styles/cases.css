@@ -202,6 +202,11 @@ a.casenav, span#ncase {
 a.casenav {
   color: rgba(0,0,0,0.8);
 }
+
+.row.braintobrain_logo.nomob .cell {
+    text-align: center;
+}
+
 span#ncase {
   color: #ff443a;
 }
